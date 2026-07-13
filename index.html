@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ناباروری و ART | مرور جامع بورد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Vazirmatn', 'sans-serif'] },
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(160deg, #eef2ff 0%, #f0f9ff 40%, #faf5ff 100%);
+    min-height: 100vh;
+  }
+  .glass-card {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 8px 32px 0 rgba(80,90,160,0.10);
+  }
+  .glass-strong {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.7);
+  }
+  .accordion-icon { transition: transform 0.3s ease; }
+  .rotate-180 { transform: rotate(180deg); }
+  .tab-btn { transition: all 0.25s ease; }
+  .tab-active { background: linear-gradient(135deg,#4f46e5,#0ea5e9) !important; color: #fff !important; box-shadow: 0 4px 14px rgba(79,70,229,0.35); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: #a5b4fc; border-radius: 10px; }
+  .content-list li { margin-bottom: 0.55rem; line-height: 2; }
+  .content-list > li::marker { color: #6366f1; font-weight: 900; }
+  .sub-h { font-weight: 900; color: #3730a3; margin-top: 1.25rem; margin-bottom: 0.5rem; display:flex; align-items:center; gap:.5rem;}
+  .telinde-box { background: #f5f3ff; border-inline-start: 4px solid #7c3aed; }
+  .williams-box { background: #ecfeff; border-inline-start: 4px solid #0d9488; }
+  .redflag-box { background: #fef2f2; border-inline-start: 4px solid #ef4444; }
+  .golden-box { background: #fffbeb; border-inline-start: 4px solid #d97706; }
+  table.gv-table th, table.gv-table td { padding: 0.6rem 0.9rem; text-align: right; }
+  table.gv-table tr:nth-child(even) { background: rgba(99,102,241,0.05); }
+  .quiz-answer { transition: all .2s ease; }
+  .badge { display:inline-block; font-size:.7rem; font-weight:800; padding:.15rem .6rem; border-radius:999px; }
+  .action-arrow { display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:9999px; }
+  .quiz-option { display:block; width:100%; text-align: right; font-size:.875rem; color:#334155; background:#fff; border:1px solid #cbd5e1; border-radius:.6rem; padding:.55rem .8rem; transition: all .15s ease; cursor:pointer; }
+  .quiz-option:hover:not(:disabled) { border-color:#6366f1; background:#eef2ff; }
+  .quiz-option:disabled { cursor:default; }
+  .quiz-option.correct { border-color:#10b981; background:#ecfdf5; color:#065f46; font-weight:800; }
+  .quiz-option.wrong { border-color:#ef4444; background:#fef2f2; color:#991b1b; font-weight:800; }
+  .searchable-item.search-hidden { display:none !important; }
+</style>
+</head>
+<body class="text-slate-800">
+
+<!-- ================= HEADER ================= -->
+<header class="sticky top-0 z-50 glass-strong shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 py-3">
+    <div class="flex items-center justify-between gap-3 flex-wrap">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-indigo-600 to-sky-500 flex items-center justify-center text-white text-lg shadow-lg shadow-indigo-200">
+          <i class="fa-solid fa-baby-carriage"></i>
+        </div>
+        <div>
+          <h1 class="font-black text-base sm:text-lg text-slate-800 leading-tight">ناباروری و ART</h1>
+        </div>
+      </div>
+      <nav class="flex items-center gap-1.5 bg-slate-100/80 rounded-2xl p-1.5 w-full sm:w-auto overflow-x-auto">
+        <button class="tab-btn tab-active flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-black text-slate-600" data-tab="tab-review">
+          <i class="fa-solid fa-book-open-reader"></i> مرور فصلی
+        </button>
+        <button class="tab-btn flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-black text-slate-600" data-tab="tab-redflags">
+          <i class="fa-solid fa-triangle-exclamation"></i> خطوط قرمز
+        </button>
+        <button class="tab-btn flex-1 sm:flex-none whitespace-nowrap flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-black text-slate-600" data-tab="tab-golden">
+          <i class="fa-solid fa-star"></i> مقادیر طلایی
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-4 py-6">
+
+  <!-- ================= SEARCH ================= -->
+  <div class="glass-card rounded-2xl px-4 py-3 mb-4 flex items-center gap-3">
+    <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+    <input id="searchInput" type="text" placeholder="جستجو در مطالب (مثلاً AMH، ICSI، وازوپرسین...)" class="flex-1 bg-transparent outline-none text-sm font-bold text-slate-700 placeholder:text-slate-400 placeholder:font-normal">
+  </div>
+
+  <!-- ================= TAB 1: مرور فصلی ================= -->
+  <section id="tab-review" class="tab-content">
+    <div id="accordion-wrap" class="space-y-4">
+
+<!-- ===================== SECTION 1 ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-1">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white"><i class="fa-solid fa-clipboard-list"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۱. کلیات، اپیدمیولوژی و ارزیابی اولیه زوج نابارور</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-1" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-book"></i> تعاریف پایه</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری:</strong> عدم بارداری پس از <strong>۱ سال</strong> نزدیکی منظم بدون پیشگیری.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">تعریف ASRM</span> ناباروری = بیماری/وضعیت شامل نیاز به مداخله پزشکی (گامت یا جنین اهدایی نیز).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اولیه:</strong> بدون سابقه بارداری قبلی &middot; <strong class="font-bold text-slate-900">ثانویه:</strong> سابقه بارداری قبلی (نه لزوماً تولد زنده).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">Fecundability:</strong> احتمال بارداری در هر سیکل &middot; <strong class="font-bold text-slate-900">Fecundity:</strong> احتمال تولد زنده.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">Impaired fecundity:</strong> بیشتر یا مساوی <strong>۳۶ ماه</strong> تلاش ناموفق.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>بارداری خودبه‌خودی ظرف ۱۲ ماه: <strong>~۹۰٪</strong> زوج‌ها.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-earth-asia"></i> اپیدمیولوژی</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>شیوع جهانی: <strong>~۱۸۶ میلیون نفر</strong> &middot; تا <strong>۱۵٪</strong> زوج‌های سنین باروری.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>سیکل‌های ART آمریکا: <strong>۱۵۰٬۰۰۰</strong> (۲۰۰۹) <i class="fa-solid fa-arrow-left action-arrow bg-sky-100 text-sky-600 text-[10px] mx-1"></i> بیش از <strong>۳۰۰٬۰۰۰</strong> (۲۰۱۹).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>سطح جهانی: فاکتور مردانه <strong>~۵۱.۲٪</strong> &middot; انسداد لوله <strong>۲۵–۳۵٪</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>اروپا: اختلال تخمک‌گذاری <strong>۲۱–۳۲٪</strong>، فاکتور مردانه <strong>۱۹–۵۷٪</strong>، فاکتور لوله‌ای <strong>۱۴–۲۶٪</strong>، بدون علت <strong>۸–۳۰٪</strong>، اندومتریوز <strong>۴–۶٪</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>فاکتور مردانه: علت منحصر در <strong>~۲۰٪</strong>، فاکتور کمک‌کننده تا <strong>۵۰٪</strong>.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-stopwatch"></i> چه زمانی ارزیابی را شروع کنیم</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-center flex-wrap gap-1"><i class="fa-solid fa-circle text-[6px] text-indigo-400 shrink-0"></i><strong class="font-bold text-slate-900">سن زن &lt; ۳۵ سال</strong><i class="fas fa-arrow-left action-arrow bg-sky-100 text-sky-600 text-xs mx-1"></i>شروع ارزیابی پس از <strong>۱۲ ماه</strong> ناباروری.</li>
+      <li class="flex items-center flex-wrap gap-1"><i class="fa-solid fa-circle text-[6px] text-indigo-400 shrink-0"></i><strong class="font-bold text-slate-900">سن زن &ge; ۳۵ سال</strong><i class="fas fa-arrow-left action-arrow bg-sky-100 text-sky-600 text-xs mx-1"></i>شروع ارزیابی پس از <strong>۶ ماه</strong> ناباروری.</li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>زنان بالای <strong>۴۰ سال</strong>: ارزیابی و درمان فوری‌تر، بدون تأخیر.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>ارزیابی فوری: قاعدگی نامنظم &middot; بیماری شناخته‌شده لوله/رحم/پریتوان (اندومتریوز) &middot; فاکتور مردانه شناخته‌شده &middot; مستعدکننده کاهش ذخیره تخمدانی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سه بررسی پایه</strong> پیش از درمان: آنالیز اسپرم &middot; تأیید تخمک‌گذاری &middot; باز بودن لوله‌ها (+ غربالگری ذخیره تخمدانی).</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-chart-pie"></i> توزیع علل ناباروری (جدول ۳۶-۱)</p>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-3">
+      <table class="gv-table w-full text-sm whitespace-nowrap">
+        <thead class="bg-indigo-50 text-indigo-700 font-black"><tr><th>علت</th><th>درصد</th></tr></thead>
+        <tbody>
+          <tr><td class="font-bold">فاکتور مردانه به‌تنهایی</td><td>۱۷–۲۸٪</td></tr>
+          <tr><td class="font-bold">فاکتور مرد و زن هر دو</td><td>۸–۳۹٪</td></tr>
+          <tr><td class="font-bold">فاکتور زنانه به‌تنهایی</td><td>۳۳–۴۰٪</td></tr>
+          <tr><td class="font-bold">بدون علت مشخص</td><td>۸–۲۸٪</td></tr>
+          <tr><td class="font-bold">اختلال تخمک‌گذاری (زنان)</td><td>۲۱–۳۶٪</td></tr>
+          <tr><td class="font-bold">فاکتور لوله‌ای/پریتوان (زنان)</td><td>۱۶–۲۸٪</td></tr>
+          <tr><td class="font-bold">سایر علل (زنان)</td><td>۹–۱۲٪</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری مطلق (Absolute Infertility):</strong> نادر؛ فقدان مادرزادی/اکتسابی برگشت‌ناپذیر گامت کارآمد یا ساختار تناسلی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">بارداری خودبه‌خودی بعید:</strong> سن مادر &gt;۴۲ سال &middot; ناباروری &gt;۴ سال &middot; اندومتریوز شدید &middot; اختلال شدید لوله‌ای — تشویق فعال به درمان، نه انتظار.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-apple-whole"></i> سبک زندگی و باروری</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">رژیم غذایی:</strong> میوه، سبزیجات، غلات کامل، امگا-۳ — بهبود احتمالی باروری زنان.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اسید فولیک:</strong> <strong>۴۰۰–۸۰۰ mcg</strong> روزانه پیش از بارداری — پیشگیری نقایص لوله عصبی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">چاقی کلاس I</strong> (BMI ۳۰–۳۴.۹)<i class="fas fa-arrow-left action-arrow bg-sky-100 text-sky-600 text-[10px] mx-1"></i>کاهش <strong>~۲۰ پوند</strong> بهبود بارداری خودبه‌خودی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">چاقی کلاس II</strong> (BMI ۳۵–&lt;۴۰)<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>نرخ بارداری IVF پایین‌تر.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کم‌وزنی</strong> (BMI &le;۱۸.۵): کاهش باروری &middot; هدف BMI طبیعی <strong>۱۸.۵–۲۵</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">الکل:</strong> اجتناب از &gt;۲ نوشیدنی/روز حین تلاش برای بارداری.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کافئین:</strong> محدودیت &lt;۲۰۰–۳۰۰ mg/day (سطح مضر ~۵۰۰ mg).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سیگار</strong> (مادر و پدر): نرخ تولد زنده پایین‌تر &middot; نرخ لغو سیکل IVF بالاتر.</span></li>
+    </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 2 : فاکتور مردانه ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-2">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center text-white"><i class="fa-solid fa-mars"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۲. فاکتور مردانه (آندرولوژی بالینی)</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-2" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-dna"></i> فیزیولوژی اسپرماتوژنز</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سلول لایدیگ:</strong> سنتز آندروژن &middot; <strong class="font-bold text-slate-900">سلول سرتولی:</strong> پوشش لوله سمینیفروس، محل اسپرماتوژنز.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong>LH</strong><i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>سنتز تستوسترون (لایدیگ) &middot; <strong>FSH + تستوسترون</strong><i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>تحریک اسپرماتوژنز (سرتولی).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>کوهورت جدید اسپرماتوگونی: هر <strong>۱۶ روز</strong> &middot; کل اسپرماتوژنز: <strong>~۷۵ روز</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>بلوغ نهایی + کاپاسیتاسیون در اپیدیدیم: <strong>۲–۶ روز</strong> — پس اسپرم TESE/PESA فاقد کاپاسیتاسیون کامل.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>کاپاسیتاسیون واقعی: موکوس سرویکس (حذف کلسترول، فسفریلاسیون تیروزین، ورود کلسیم) &middot; واکنش آکروزوم: پس از عبور از کومولوس.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-vial-circle-check"></i> آنالیز اسپرم (Semen Analysis)</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>هیچ پارامتر منفرد تشخیصی نیست؛ افزایش تعداد پارامترهای غیرطبیعی <i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i> احتمال ناباروری بالاتر.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>حداقل <strong>۲ آنالیز اسپرم</strong> (تغییرپذیری بین انزال‌ها)، به‌خصوص در غیرطبیعی بودن.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اصطلاحات:</strong> نورموزواسپرمی &middot; الیگوزواسپرمی (کاهش تعداد) &middot; آستنوزواسپرمی (کاهش تحرک) &middot; تراتوزواسپرمی (فرم غیرطبیعی) &middot; آزواسپرمی (فقدان اسپرم) &middot; آسپرمی (فقدان مایع منی) &middot; لکوسیتواسپرمی &middot; نکروزواسپرمی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>پرهیز از انزال پیش از آنالیز: <strong>۲–۷ روز</strong> &middot; برای IUI: &le;۲ روز (بهبود نرخ بارداری).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>انتقال نمونه به آزمایشگاه: &le;۳۰ دقیقه (حداکثر ۵۰) &middot; بررسی ظرف ۱ ساعت &middot; دما ۲۰–۳۷°C.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>حجم مایع منی &lt;۱ mL<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>بررسی انزال رتروگراد (ادرار پس از انزال) &middot; &gt;۵ mL<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>التهاب غدد کمکی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">معیار Kruger/Tygerberg:</strong> مورفولوژی طبیعی &lt;۹٪ — پیش‌بینی‌کننده قوی‌تر از تعداد/تحرک.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>پاتوژن‌های شایع باکتریواسپرمی: Chlamydia trachomatis، Ureaplasma urealyticum، Mycoplasma hominis.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">TUNEL</strong> (فراگمانتاسیون DNA اسپرم): بهترین همبستگی با پیامد بارداری.</span></li>
+    </ul>
+
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جمع‌آوری نمونه</p>
+      <p class="text-sm text-red-900"><strong>کاندوم لاتکس معمولی:</strong> سمی برای اسپرم — ممنوع مطلق. فقط کاندوم مخصوص آنالیز اسپرم مجاز. لوبریکنت‌های Astroglide، KY Jelly، بزاق، روغن زیتون: مهار تحرک اسپرم.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-pump-medical"></i> داروها و اسپرماتوژنز</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">مضر اسپرماتوژنز:</strong> سولفاسالازین، متوترکسات، نیتروفورانتوئین، کلشی‌سین، شیمی‌درمانی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سرکوب هیپوفیز:</strong> تستوسترون اگزوژن، آنالوگ‌های GnRH &middot; <strong class="font-bold text-slate-900">آنتی‌آندروژنیک:</strong> سایمتیدین، اسپیرونولاکتون.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز تستوسترون‌درمانی</p>
+      <p class="text-sm text-red-900">تستوسترون اگزوژن در ساب‌فرتیلیتی مردانه (غیرآزواسپرمی): ممنوع مطلق — بازخورد منفی هیپوفیزی، کاهش تستوسترون داخل‌بیضه‌ای و اسپرماتوژنز.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-water"></i> واریکوسل</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>واریکوسل قابل‌لمس: <strong>۱۳.۵٪</strong> مردان اخیراً پدرشده &middot; <strong>۳۱٪</strong> الیگوزواسپرمی ایدیوپاتیک.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>پس از ترمیم واریکوسل: تأخیر شروع ART &ge;<strong>۶ ماه</strong>.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جراحی واریکوسل</p>
+      <p class="text-sm text-red-900">جراحی واریکوسل در آزواسپرمی غیرانسدادی (نارسایی بیضه): ممنوع مطلق.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-syringe"></i> IUI و اسپرم اهدایی</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>IUI: <strong>۰.۳–۰.۵ mL</strong> اسپرم شسته‌شده در حفره داخل رحمی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>TMSC (شمارش اسپرم متحرک کل) &ge;<strong>۹ میلیون</strong><i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>بهترین نرخ بارداری (<strong>۱۶.۷٪</strong>/سیکل).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>&ge;۲ فولیکول &ge;۱۵ mm<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>نرخ زایمان ~دو برابر تک‌فولیکول (<strong>۱۷٪ در برابر ۸٪</strong>).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>زمان IUI: <strong>۲۴–۳۶ ساعت</strong> پس از تریگر hCG یا <strong>۲۴ ساعت</strong> پس از سرج خودبه‌خودی LH.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز اسپرم اهدایی</p>
+      <p class="text-sm text-red-900"><strong>اسپرم اهدایی تازه:</strong> ممنوع مطلق (CDC/ASRM) — خطر انتقال HIV. فقط نمونه منجمد و قرنطینه &ge;۶ ماه با بازآزمایش اهداکننده مجاز. اهداکننده با سابقه خانوادگی اختلال غالب/وابسته به X: مستثنا مطلق.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-microscope"></i> ICSI</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>تزریق مستقیم یک اسپرم زنده به تخمک — دور زدن محدودیت تحرک، کاپاسیتاسیون، اتصال به زونا.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اندیکاسیون اصلی:</strong> فاکتور مردانه شدید &middot; تخمک منجمد قبلی &middot; اسپرم جراحی (TESE/TESA/PESA/MESA).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>اندیکاسیون غیرمردانه (تراتوزواسپرمی خفیف، ناباروری بدون علت، سن مادری بالا): بدون شواهد قوی برتری بر IVF متعارف.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>دژنراسیون تخمک پس از ICSI: <strong>۵–۱۹٪</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>میکرودیلیشن Y، کاریوتایپ غیرطبیعی، جهش CF<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>مشاوره ژنتیک الزامی پیش از ICSI.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-flask-vial"></i> آزواسپرمی: طبقه‌بندی و درمان</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>شیوع: <strong>۱٪</strong> کل مردان &middot; <strong>۱۰–۱۵٪</strong> مردان نابارور.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">طبقه‌بندی:</strong> پیش‌بیضه‌ای (هیپوگنادوتروپیک، قابل‌درمان هورمونی) &middot; بیضه‌ای (هیپرگنادوتروپیک، نارسایی گنادی) &middot; پس‌بیضه‌ای (انسدادی).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>غیرانسدادی: کاریوتایپ (شایع‌ترین: کلاین‌فلتر) + میکرودیلیشن Y الزامی &middot; انسدادی: تست ژنتیکی CFTR الزامی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong>CBAVD</strong> (فقدان مادرزادی دوطرفه وازدفران): جهش CFTR در ~دو سوم مردان — آزمایش ناقل‌بودن شریک زن الزامی پیش از بارداری.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>فقدان یک/دوطرفه وازدفران<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>تصویربرداری کلیه ضروری (آژنزی کلیوی همراه <strong>۱۰–۲۵٪</strong>).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>برگشت وازکتومی: باز بودن ~<strong>۱۰۰٪</strong>، بارداری ~<strong>۸۰٪</strong> &middot; آزواسپرمی ۶ ماه پس از برگشت = شکست عمل <i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>برداشت اسپرم بیضه + ICSI.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز بیوپسی بیضه</p>
+      <p class="text-sm text-red-900">آزواسپرمی هیپرگنادوتروپیک (نارسایی بیضه‌ای، LH/FSH بالا + تستوسترون پایین): بیوپسی بیضه توصیه نمی‌شود — اسپرم اهدایی مدنظر.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-user-clock"></i> سن پیشرفته پدری (APA)</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>تعریف: &ge;<strong>۴۰ سال</strong> در زمان لقاح &middot; افت محسوس بارداری در ۴۰–۴۵ سال، به‌ویژه بالای ۵۰.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>APA<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>اختلالات اثر سن پدری (آکندروپلازی)، خطر بالاتر شکاف لب و فتق دیافراگماتیک.</span></li>
+    </ul>
+    </div>
+
+    <!-- QUIZ SECTION 2 -->
+    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱ &middot; فرآیند توانمندسازی اسپرم و میکرواینجکشن</p>
+        <p class="text-slate-700 text-sm mb-3">یکی از مراحل capacitation اسپرم در اپیدیدیم انجام می‌شود. اگر اسپرم از وازدفران یا بیضه گرفته شود، برای لقاح آن از چه روشی باید استفاده کرد؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q1-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) IVF</button>
+          <button type="button" class="quiz-option" data-correct="true">ب) میکرواینجکشن</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) IUI</button>
+          <button type="button" class="quiz-option" data-correct="false">د) تزریق ساب زونال</button>
+        </div>
+        <div id="q1-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه ب (میکرواینجکشن / ICSI)</p>
+          <p>اسپرم‌هایی که مستقیماً از بیضه (TESE/TESA) یا وازدفران استخراج می‌شوند، مراحل نهایی بلوغ و کاپاسیتاسیون را در اپیدیدیم طی نکرده‌اند و فاقد توانایی نفوذ به زونا پلوسیدا در IVF متعارف هستند؛ تنها روش مؤثر بارورسازی، تزریق درون سیتوپلاسمی اسپرم (ICSI) است.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 3 : ذخیره تخمدانی و سن باروری ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-3">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-fuchsia-500 to-purple-600 flex items-center justify-center text-white"><i class="fa-solid fa-hourglass-half"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۳. سن باروری و ذخیره تخمدانی (DOR)</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-3" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-chart-line"></i> سن زنانه و افت باروری</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span>روند احتمال بارداری: اوج در <strong>۲۰ سالگی</strong> <i class="fas fa-arrow-left action-arrow bg-fuchsia-100 text-fuchsia-600 text-[10px] mx-1"></i> کاهش خفیف در ۳۲ سالگی <i class="fas fa-arrow-left action-arrow bg-fuchsia-100 text-fuchsia-600 text-[10px] mx-1"></i> افت شدید پس از ۳۷ <i class="fas fa-arrow-left action-arrow bg-fuchsia-100 text-fuchsia-600 text-[10px] mx-1"></i> نادر پس از ۴۵.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span>پیری کرونولوژیک آندومتر: نقش ناچیز &middot; تولد زنده با تخمک اهدایی (صرف‌نظر از سن گیرنده): <strong>۳۷–۵۰٪</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span>پیری تولیدمثلی<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>ناهنجاری دوک میوتیک تخمک<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>خطای هم‌ترازی کروموزومی و آنئوپلوئیدی جنین (تریزومی).</span></li>
+    </ul>
+    <div class="overflow-x-auto rounded-xl border border-slate-200">
+      <table class="gv-table w-full text-sm whitespace-nowrap">
+        <thead class="bg-fuchsia-50 text-fuchsia-700 font-black"><tr><th>گروه سنی</th><th>نرخ سقط خودبه‌خودی بالینی</th></tr></thead>
+        <tbody>
+          <tr><td class="font-bold">دهه ۲۰ تا اوایل ۳۰</td><td>۱۱–۱۳٪</td></tr>
+          <tr><td class="font-bold">۳۵–۳۹ سالگی</td><td>۲۴.۶٪</td></tr>
+          <tr><td class="font-bold">۴۰–۴۴ سالگی</td><td>۵۱٪</td></tr>
+          <tr><td class="font-bold">بالای ۴۵ سالگی</td><td>۹۳.۴٪</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-vial"></i> «کاهش ذخیره تخمدانی» (DOR)</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">تعریف:</strong> زن سن باروری با قاعدگی منظم، پاسخ کاهش‌یافته به تحریک تخمدانی نسبت به هم‌سالان.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ارزیابی:</strong> AMH، AFC، یا FSH + استرادیول فاز فولیکولار.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span>تشخیص DOR: بدون پیش‌بینی مداوم پیامد بارداری/موفقیت IVF — نباید به‌تنهایی مبنای رد درمان باشد.</span></li>
+    </ul>
+    </div>
+
+    <div class="golden-box searchable-item rounded-xl p-4 mb-5">
+      <p class="flex items-center gap-2 font-black text-amber-700 mb-3"><i class="fa-solid fa-star"></i> مارکرهای ذخیره تخمدانی — کات‌آف‌های کلیدی</p>
+      <div class="overflow-x-auto rounded-lg border border-amber-200 bg-white/60">
+        <table class="w-full text-sm whitespace-nowrap">
+          <thead class="bg-amber-100 text-amber-800 font-black"><tr><th class="p-2 text-right">مارکر</th><th class="p-2 text-right">کات‌آف</th><th class="p-2 text-right">معنی</th></tr></thead>
+          <tbody class="text-amber-900">
+            <tr><td class="p-2 font-bold">AMH</td><td class="p-2">&gt;۳.۵ ng/mL</td><td class="p-2">پاسخ بیش از حد</td></tr>
+            <tr><td class="p-2 font-bold">AMH</td><td class="p-2">&lt;۱ ng/mL</td><td class="p-2">پاسخ ضعیف</td></tr>
+            <tr><td class="p-2 font-bold">AFC (فولیکول ۲–۱۰mm)</td><td class="p-2">&lt;۴</td><td class="p-2">پاسخ ضعیف، لغو سیکل بالاتر</td></tr>
+            <tr><td class="p-2 font-bold">FSH پایه روز ۳</td><td class="p-2">&ge;۱۲ mIU/mL</td><td class="p-2">آستانه بالا</td></tr>
+            <tr><td class="p-2 font-bold">FSH (دهه ۴۰)</td><td class="p-2">&gt;۲۰ IU/L</td><td class="p-2">پیش‌بینی‌کننده یائسگی</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="text-sm text-amber-900 space-y-1.5 mt-3">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-600 mt-2 shrink-0"></i><span>FSH &ge;۸ IU/L: هر واحد افزایش FSH<i class="fas fa-arrow-left action-arrow bg-amber-200 text-amber-700 text-[10px] mx-1"></i>۷٪ کاهش بارداری خودبه‌خودی.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-600 mt-2 shrink-0"></i><span>AFC و AMH: فقط «کمیت» ذخیره تخمدانی، نه «کیفیت» تخمک (وابسته به سن).</span></li>
+      </ul>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-pills"></i> گزینه‌های درمانی و مکمل در DOR</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span><span class="badge bg-emerald-100 text-emerald-700">کوکران، شواهد متوسط</span> <strong class="font-bold text-slate-900">DHEA:</strong> ۲۵mg سه‌بار/روز، ۲–۵ ماه — بهبود تولد زنده در پاسخ‌دهنده ضعیف.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">تستوسترون ترانس‌درمال:</strong> ۱۰–۱۲.۵mg، ۱۴–۲۸ روز &middot; <strong class="font-bold text-slate-900">هورمون رشد:</strong> ۲.۵mg زیرجلدی از روز ۶ تحریک — بهبود پیامد در برخی متاآنالیزها.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">CoQ10:</strong> ۶۰۰mg روزانه، ۲ ماه &middot; <strong class="font-bold text-slate-900">امگا-۳:</strong> ۴g روزانه، ۴ هفته — بهبود غیرقطعی کیفیت جنین.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-fuchsia-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">درمان نهایی:</strong> IVF اتولوگ &middot; تخمک/جنین اهدایی &middot; فرزندخواندگی.</span></li>
+    </ul>
+    </div>
+
+    <!-- QUIZ SECTION 3 -->
+    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۳ &middot; ارزیابی رزرو تخمدانی پایین در بیماران جوان</p>
+        <p class="text-slate-700 text-sm mb-3">خانم ۳۲ ساله، نولیپار با ۶ سال نازایی و سابقه اندومتریومای بزرگ دوطرفه تخمدان، FSH برابر ۸.۳ و AMH برابر ۰.۱ برای مشاوره درباره نتیجه بارداری از طریق IVF مراجعه کرده است. کدام عبارت صحیح است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q3-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) برای پیشگویی وضعیت، اندازه‌گیری FSH روز سوم لازم است.</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) AMH به‌همراه AFC به‌خوبی می‌تواند احتمال بارداری را پیشگویی کند.</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) افزودن کلومید برای افزایش تعداد تخمک‌های در حال رشد بسیار مفید است.</button>
+          <button type="button" class="quiz-option" data-correct="true">د) نتیجه غیرطبیعی AMH و AFC احتمال وقوع بارداری را نفی نمی‌کند.</button>
+        </div>
+        <div id="q3-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه د</p>
+          <p>AMH و AFC فقط «کمیت» ذخیره تخمدانی و تعداد تخمک قابل‌برداشت را پیش‌بینی می‌کنند، نه «کیفیت» تخمک و شانس بارداری که وابسته به سن است. در یک زن ۳۲ ساله با AMH بسیار پایین، تخمک‌های باقی‌مانده هنوز کیفیت ژنتیکی خوبی دارند؛ بنابراین آزمایش‌های رزرو تخمدانی نامناسب هرگز نباید مبنای محروم کردن بیمار از درمان باشد.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۸ &middot; پیش‌بینی دقیق پاسخ تخمدان به تحریک هورمونی</p>
+        <p class="text-slate-700 text-sm mb-3">برای پیشگویی پاسخ‌دهی تخمدان به درمان، کدام مارکر بهتر است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q8-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) سطح بازال استرادیول</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) FSH بازال</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) سطح بازال Inhibin B</button>
+          <button type="button" class="quiz-option" data-correct="true">د) میزان AFC</button>
+        </div>
+        <div id="q8-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه د (AFC)</p>
+          <p>شمارش فولیکول‌های آنترال (AFC) به‌همراه AMH دقیق‌ترین مارکرهای پیش‌بینی‌کننده پاسخ تخمدان (ضعیف یا شدید) به گنادوتروپین‌ها هستند؛ نوسان سیکلی بسیار ناچیزی دارند و مستقیماً تعداد فولیکول‌های در حال رشد قابل جذب توسط گنادوتروپین اگزوژن را نشان می‌دهند.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 4 : فاکتور تخمک‌گذاری و PCOS ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-4">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white"><i class="fa-solid fa-egg"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۴. فاکتور تخمک‌گذاری و PCOS</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-4" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-calendar-days"></i> فاکتور تخمک‌گذاری</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>اختلال تخمک‌گذاری: <strong>۳۰–۴۰٪</strong> کل ناباروری زنانه.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>سیکل طبیعی: <strong>۲۱–۳۵ روز</strong> (میانگین ۲۷–۲۹) &middot; فاز لوتئال: معمولاً ثابت ۱۴ روز، دامنه ۷–۱۹ روز.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>آنووولاسیون/تخمک‌گذاری نامنظم<i class="fas fa-arrow-left action-arrow bg-amber-100 text-amber-600 text-[10px] mx-1"></i>آزمایش FSH، پرولاکتین، TSH.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>FSH: فعال‌سازی مسیر ضدآپوپتوز گرانولوزا — بقای فولیکول غالب &middot; افت انتهای فاز فولیکولار<i class="fas fa-arrow-left action-arrow bg-amber-100 text-amber-600 text-[10px] mx-1"></i>آترزی فولیکول‌های غیرغالب.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-magnifying-glass-chart"></i> مستندسازی تخمک‌گذاری</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">پنجره باروری:</strong> ۶ روز منتهی به تخمک‌گذاری &middot; بقای اسپرم در موکوس سرویکس: تا ۶ روز &middot; بقای تخمک: &lt;۱ روز.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">BBT</strong> (دمای پایه بدن): توصیه نمی‌شود — منفی کاذب مکرر، ناتوان در پیش‌بینی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>کیت LH ادراری: آستانه <strong>۳۵–۵۰ mIU/mL</strong> &middot; تخمک‌گذاری ظرف <strong>۴۸ ساعت</strong> پس از سرج.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><span class="badge bg-emerald-100 text-emerald-700">استاندارد طلایی غیرتهاجمی</span> پروژسترون میان‌لوتئال (۷ روز پیش از قاعدگی بعدی) &gt;<strong>۳ ng/mL</strong>.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز کیت LH</p>
+      <p class="text-sm text-red-900">کیت LH ادراری در سیکل نامنظم: غیرقابل‌اتکا مطلق (مثبت کاذب تا ۷٪ سیکل‌ها، به‌ویژه PCOS).</p>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-venus"></i> سندرم تخمدان پلی‌کیستیک (PCOS)</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>شایع‌ترین علت الیگو/آنووولاسیون (جمعیت عمومی و نابارور).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">تشخیص:</strong> رد سایر شرایط + ۲ از ۳ معیار: الیگو/آنووولاسیون &middot; هایپرآندروژنیسم بالینی/آزمایشگاهی &middot; مورفولوژی پلی‌کیستیک سونوگرافیک.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>نسبت LH:FSH بالا یا هایپرانسولینمی: غیرالزامی برای تشخیص/درمان.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>کاهش وزن <strong>۵٪</strong><i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>بهبود نرخ بارداری &middot; توصیه: کاهش ۵۰۰ kcal/day.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-capsules"></i> داروهای القای تخمک‌گذاری</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">خط اول</span> القای تخمک‌گذاری در ناباروری آنووولاتوری.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کلومیفن سیترات:</strong> استروژن سنتزی ضعیف، اثر آنتاگونیست استروژنی — نیازمند محور HPO سالم.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>۶ ماه کلومیفن: تخمک‌گذاری <strong>۴۹٪</strong> &middot; بارداری <strong>۲۳.۹٪</strong> &middot; تولد زنده <strong>۲۲.۵٪</strong> &middot; چندقلویی ~۸٪ (اکثراً دوقلو).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">لتروزول:</strong> مهارکننده آروماتاز غیراستروئیدی، نیمه‌عمر <strong>۴۸ ساعت</strong> (در برابر کلومیفن: ۲ هفته).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>لتروزول (۲.۵mg) در برابر کلومیفن (۵۰mg) در PCOS<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>تولد زنده تجمعی بالاتر، به‌ویژه BMI&gt;۳۰.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>پاسخ تخمک‌گذاری با کلومید/لتروزول در PCOS: <strong>۶۰–۸۵٪</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>متفورمین: محدودکننده احتمالی OHSS، بهبود بارداری بالینی — بدون مزیت قطعی تولد زنده.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز کلومیفن سیترات</p>
+      <p class="text-sm text-red-900">اختلال بینایی حین مصرف کلومیفن سیترات: قطع فوری و مطلق دارو.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-syringe"></i> درمان گنادوتروپینی و جراحی PCOS</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">خط دوم</span> مقاومت به کلومیفن/لتروزول<i class="fas fa-arrow-left action-arrow bg-amber-100 text-amber-600 text-[10px] mx-1"></i>گنادوتروپین تزریقی + مانیتورینگ سونوگرافیک دقیق (پیشگیری چندقلویی/OHSS).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">دریلینگ لاپاراسکوپیک تخمدان:</strong> گزینه جراحی در PCOS مقاوم به دارو — کاهش استرومای مولد آندروژن، بازتنظیم HPO.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-amber-500 mt-2 shrink-0"></i><span>آنووولاسیون<i class="fas fa-arrow-left action-arrow bg-amber-100 text-amber-600 text-[10px] mx-1"></i>بررسی هیپرپرولاکتینمی و هیپوتیروئیدی (علل قابل‌درمان).</span></li>
+    </ul>
+    </div>
+
+    <!-- QUIZ SECTION 4 -->
+    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۷ &middot; اثر فیزیولوژیک و فارماکولوژیک FSH بر فولیکول‌ها</p>
+        <p class="text-slate-700 text-sm mb-3">کدام‌یک از هورمون‌های زیر مانع آپوپتوز فولیکول‌ها می‌شود؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q7-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) FSH</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) LH</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) استروژن</button>
+          <button type="button" class="quiz-option" data-correct="false">د) پروژسترون</button>
+        </div>
+        <div id="q7-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف (FSH)</p>
+          <p>FSH فاکتور اصلی بقای فولیکول‌های آنترال در حال رشد است و با فعال کردن مسیرهای ضدآپوپتوز در سلول‌های گرانولوزا، به فولیکول غالب اجازه می‌دهد فازهای نهایی رشد را طی کند. کاهش فیزیولوژیک FSH در انتهای فاز فولیکولار (به علت فیدبک منفی استروژن) باعث آپوپتوز فولیکول‌های غیرغالب می‌شود.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۹ &middot; اثبات قطعی وقوع تخمک‌گذاری</p>
+        <p class="text-slate-700 text-sm mb-3">کدام‌یک از روش‌های زیر برای اثبات تخمک‌گذاری بهتر است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q9-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) BBT</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) بررسی موکوس سرویکال</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) شرح‌حال قاعدگی</button>
+          <button type="button" class="quiz-option" data-correct="true">د) اندازه‌گیری پروژسترون سرم</button>
+        </div>
+        <div id="q9-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه د</p>
+          <p>اگرچه قاعدگی منظم، BBT و تغییرات موکوس سرویکس نشانه‌های تخمینی تخمک‌گذاری هستند، استاندارد طلایی غیرتهاجمی، اندازه‌گیری پروژسترون سرم در اواسط فاز لوتئال (روز ۲۱ سیکل ۲۸ روزه) است. سطح بیشتر از ۳ نانوگرم بر میلی‌لیتر (ترجیحاً بیشتر از ۱۰) تأییدکننده عملکرد جسم زرد است.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 5 : فاکتور لوله‌ای ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-5">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 flex items-center justify-center text-white"><i class="fa-solid fa-route"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۵. فاکتور لوله‌ای (Tubal Factor)</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-5" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-x-ray"></i> ارزیابی تصویربرداری لوله</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">خط اول</span> <strong class="font-bold text-slate-900">HSG:</strong> بررسی باز بودن لوله + آناتومی حفره رحم — فاز فولیکولار اولیه (پس از قطع خونریزی، پیش از تخمک‌گذاری).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سونوهیستروگرافی سالین / HyCoSy:</strong> جایگزین کم‌تهاجمی‌تر برای ارزیابی هم‌زمان حفره و باز بودن لوله.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span>سرولوژی کلامیدیا (Chlamydia IgG): مارکر غیرمستقیم ریسک آسیب لوله‌ای/PID قبلی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><span class="badge bg-emerald-100 text-emerald-700">استاندارد طلایی</span> لاپاراسکوپی + کروموپرتوباسیون (تزریق رنگ داخل رحمی، مشاهده خروج از فیمبریا).</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خطر HSG</p>
+      <p class="text-sm text-red-900">HSG<i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>خطر فعال شدن مجدد عفونت لگنی خاموش؛ در پرخطر یا سابقه هیدروسالپینکس، پروفیلاکسی آنتی‌بیوتیکی مدنظر.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-scissors"></i> درمان ناباروری فاکتور لوله‌ای</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">انسداد پروگزیمال:</strong> کانولاسیون سلکتیو لوله (هیستروسکوپیک/رادیولوژیک) <i class="fas fa-arrow-left action-arrow bg-teal-100 text-teal-600 text-[10px] mx-1"></i> در شکست: IVF مستقیم.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">انسداد دیستال</strong> (غیر استریلیزاسیون/هیدروسالپینکس): آسیب خفیف <i class="fas fa-arrow-left action-arrow bg-teal-100 text-teal-600 text-[10px] mx-1"></i>جراحی ترمیمی (فیمبریوپلاستی/سالپنگوستومی) &middot; آسیب شدید <i class="fas fa-arrow-left action-arrow bg-teal-100 text-teal-600 text-[10px] mx-1"></i>IVF ارجح.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">هیدروسالپینکس:</strong> کاهش قابل‌توجه لانه‌گزینی/بارداری IVF (جریان برگشتی مایع سمی به حفره رحم).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span>سالپنژکتومی یا انسداد پروگزیمال هیدروسالپینکس پیش از IVF<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>بهبود معنی‌دار لانه‌گزینی و تولد زنده.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-teal-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">برگشت‌پذیری استریلیزاسیون</strong> (Tubal Reanastomosis): گزینه در بیماران جوان با طول باقی‌مانده کافی لوله؛ انتخاب در برابر IVF بر اساس سن، ذخیره تخمدانی، نوع استریلیزاسیون قبلی.</span></li>
+    </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== SECTION 6 : فاکتور رحمی ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-6">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-rose-500 to-pink-600 flex items-center justify-center text-white"><i class="fa-solid fa-shapes"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۶. فاکتور رحمی (Uterine Factors)</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-6" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-camera"></i> تصویربرداری تشخیصی پاتولوژی رحمی</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">خط اول</span> سونوگرافی ترانس‌واژینال &middot; SIS (سونوهیستروگرافی سالین): حساسیت بالاتر برای ضایعات داخل‌حفره‌ای (پولیپ، میوم ساب‌موکوز، چسبندگی).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span><span class="badge bg-emerald-100 text-emerald-700">استاندارد طلایی</span> MRI برای ناهنجاری مادرزادی مولرین پیچیده، به‌ویژه رحم تک‌شاخ + شاخ فرعی غیرعملکردی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span>HSG: فقط شاخ عملکردی متصل به واژن؛ ناتوان در ارزیابی شاخ فرعی مسدود (Non-communicating horn).</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-venus-mars"></i> ناهنجاری‌های مادرزادی رحم</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">رحم سپتوم‌دار:</strong> شایع‌ترین آنومالی مولرین — مرتبط با سقط مکرر، زایمان زودرس، شکست لانه‌گزینی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">رحم تک‌شاخ + شاخ فرعی غیرعملکننده:</strong> ریسک حاملگی اکتوپیک شاخی خطرناک — تشخیص دقیق با MRI حیاتی.</span></li>
+    </ul>
+
+    <div class="telinde-box searchable-item rounded-xl p-4 mt-3">
+      <p class="flex items-center gap-2 font-black text-violet-700 mb-2"><i class="fa-solid fa-syringe"></i> نکته جراحی (Te Linde) — سپتوپلاستی پیشگیرانه</p>
+      <ul class="text-sm text-violet-900 space-y-1.5">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>کاندید ICSI + سپتوم<i class="fas fa-arrow-left action-arrow bg-violet-200 text-violet-700 text-[10px] mx-1"></i>افزایش ریسک شکست لانه‌گزینی و سقط.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>برداشت سپتوم هیستروسکوپیک <strong>پروفیلاکتیک</strong> (نه صرفاً پس از سقط مکرر/زایمان زودرس) — پیش از سیکل هورمونی و انتقال جنین.</span></li>
+      </ul>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-shapes"></i> فیبروم (لیومیوم) و میومکتومی</p>
+    <div class="overflow-x-auto rounded-xl border border-slate-200 mb-3">
+      <table class="gv-table w-full text-sm whitespace-nowrap">
+        <thead class="bg-rose-50 text-rose-700 font-black"><tr><th>FIGO/ESH</th><th>محل</th><th>کاندید هیستروسکوپی</th></tr></thead>
+        <tbody>
+          <tr><td class="font-bold">نوع ۰</td><td>کاملاً داخل حفره‌ای</td><td class="text-emerald-600 font-bold">بهترین کاندید</td></tr>
+          <tr><td class="font-bold">نوع ۱</td><td>نفوذ &lt;۵۰٪ میومتر</td><td class="text-emerald-600 font-bold">کاندید</td></tr>
+          <tr><td class="font-bold">نوع ۲</td><td>نفوذ &gt;۵۰٪ میومتر</td><td class="text-amber-600 font-bold">مهارت بالا / اپروچ شکمی</td></tr>
+          <tr><td class="font-bold">نوع ۳–۸</td><td>عمدتاً/کاملاً اینترامورال-ساب‌سروزال</td><td class="text-red-600 font-bold">ممنوع مطلق از راه هیستروسکوپی</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="telinde-box searchable-item rounded-xl p-4 mb-3">
+      <p class="flex items-center gap-2 font-black text-violet-700 mb-2"><i class="fa-solid fa-syringe"></i> نکته جراحی (Te Linde) — آماده‌سازی و تکنیک میومکتومی هیستروسکوپیک</p>
+      <ul class="text-sm text-violet-900 space-y-1.5">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>میوم بزرگ + آنمی<i class="fas fa-arrow-left action-arrow bg-violet-200 text-violet-700 text-[10px] mx-1"></i>آگونیست GnRH <strong>۳–۴ ماه</strong> پیش از عمل — آمنوره، اصلاح آنمی با آهن، کاهش سایز میوم.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>تنگی احتمالی سرویکس<i class="fas fa-arrow-left action-arrow bg-violet-200 text-violet-700 text-[10px] mx-1"></i>میزوپروستول پیش از عمل — تسهیل دیلاتاسیون، کاهش ریسک پرفوراسیون.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>وازوپرسین رقیق‌شده (<strong>۲۰ واحد/۲۰۰mL NS</strong>) در استرومای سرویکس، ساعات <strong>۱۰، ۲، ۵، ۷</strong> (هرکدام ۵mL، عمق ۱cm) — کاهش خونریزی و جذب مایع.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>فیبروم نوع ۱/۲ سایز &gt;۴–۶cm<i class="fas fa-arrow-left action-arrow bg-violet-200 text-violet-700 text-[10px] mx-1"></i>جراحی دو مرحله‌ای (Two-staged) + رضایت آگاهانه اختصاصی.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>مشاهده فاشیکل عضلانی صورتی میومتر (بدون نمای مارپیچی سفید فیبروم)<i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>توقف/حداقل فوری انرژی الکتریکی.</span></li>
+      </ul>
+    </div>
+
+    <div class="redflag-box searchable-item rounded-xl p-4 mb-3">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز تزریق وازوپرسین سرویکس</p>
+      <p class="text-sm text-red-900">تزریق در ساعات ۳ و ۹ سرویکس: ممنوع مطلق (مجاورت شریان‌های اصلی رحمی — خطر آریتمی، برادی‌کاردی، افزایش شدید فشار خون). آسپیراسیون الزامی پیش از هر تزریق؛ در صورت مشاهده خون، هرگز تزریق مجدد در همان نقطه.</p>
+    </div>
+
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز دفیست مایع هیستروسکوپی</p>
+      <p class="text-sm text-red-900">هیستروسکوپی مونوپولار با مایع غیریونی کم‌اسموالار (گلایسین ۱.۵٪، سوربیتول ۳٪، مانیتول ۵٪): دفیست &ge;<strong>۱۵۰۰ mL</strong><i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>توقف فوری جراحی — خطر هیپوناترمی کشنده و عوارض مغزی-عروقی. مورسیلاتور/HTRS فاقد انعقاد عروقی؛ خونریزی<i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>وازوپرسین سرویکسی یا کاتتر فولی تامپوناد.</p>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-seedling"></i> پولیپ آندومتر و سینشیای داخل‌رحمی (سندرم آشرمن)</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span>پولیپکتومی هیستروسکوپیک (حتی بدون علامت)<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>بهبود نرخ بارداری.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سندرم آشرمن</strong> (چسبندگی داخل‌رحمی): معمولاً پس از کورتاژ (زایمان/سقط) یا جراحی رحمی — تظاهر: آمنوره/هیپومنوره + ناباروری.</span></li>
+    </ul>
+
+    <div class="telinde-box searchable-item rounded-xl p-4 mb-3">
+      <p class="flex items-center gap-2 font-black text-violet-700 mb-2"><i class="fa-solid fa-syringe"></i> نکته جراحی (Te Linde) — پیشگیری از سندرم آشرمن</p>
+      <ul class="text-sm text-violet-900 space-y-1.5">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>ورود ناخواسته به حفره رحم حین میومکتومی شکمی/لاپاروسکوپیک<i class="fas fa-arrow-left action-arrow bg-violet-200 text-violet-700 text-[10px] mx-1"></i>ترمیم اندومتر مجزا با بخیه ظریف قابل‌جذب (۳-۰).</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>فیبروم‌های متقابل (Opposing Fibroids)، درمان ترانس‌مورال، UAE، شرایط هیپواستروژنیک<i class="fas fa-arrow-left action-arrow bg-violet-200 text-violet-700 text-[10px] mx-1"></i>افزایش خطر چسبندگی داخل‌رحمی تا <strong>۱۰٪</strong>.</span></li>
+      </ul>
+    </div>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز بخیه اندومتر</p>
+      <p class="text-sm text-red-900">ترمیم لایه اندومتر پس از میومکتومی: ورود نخ/سوزن بخیه به فضای داخلی حفره رحم — ممنوع مطلق (ریسک بالای سینشی و انسداد حفره).</p>
+    </div>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-hourglass-end"></i> نقص فاز لوتئال (LPD) و مکمل پروژسترون</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span>LPD: غیرپذیرفته‌شده به‌عنوان علت مستقل/قابل‌تشخیص با آزمایش استاندارد؛ بیوپسی آندومتر برای «تعیین سن آندومتر»: دیگر توصیه نمی‌شود.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-rose-500 mt-2 shrink-0"></i><span>حمایت پروژسترون واژینال/عضلانی در سیکل ART: استاندارد جبران عملکرد ناکافی جسم زرد (به‌ویژه پس از تریگر آگونیست GnRH).</span></li>
+    </ul>
+    </div>
+
+    <!-- QUIZ SECTION 6 -->
+    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۲ &middot; سپتوپلاستی پیشگیرانه قبل از شروع ART</p>
+        <p class="text-slate-700 text-sm mb-3">خانم ۴۰ ساله با نازایی اولیه و رحم سپتوم‌دار، به علت فاکتور مردانه کاندیدای میکرواینجکشن است. در مورد جراحی سپتوم، اقدام صحیح کدام است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q12-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) به‌صورت پروفیلاکتیک</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) در صورت یک بار سقط</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) در صورت یک بار زایمان زودرس</button>
+          <button type="button" class="quiz-option" data-correct="false">د) در صورت سقط مکرر</button>
+        </div>
+        <div id="q12-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف</p>
+          <p>در بیمار ناباروری کاندید ICSI، وجود سپتوم ریسک شکست لانه‌گزینی و سقط را افزایش می‌دهد؛ توصیه برداشتن هیستروسکوپیک سپتوم به‌صورت پیشگیرانه، پیش از شروع سیکل هورمونی است تا محیط آندومتر برای پذیرش جنین به حداکثر آمادگی برسد.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۳ &middot; مدیریت دارویی پیش از میومکتومی هیستروسکوپیک</p>
+        <p class="text-slate-700 text-sm mb-3">بیمار با نازایی اولیه دو ساله، خونریزی زیاد قاعدگی با هموگلوبین ۸ و میومای ۵ سانتی‌متری FIGO I با فاصله ۱۵ میلی‌متر تا سروز رحم. بهترین انتخاب کدام است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q13-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) GnRH آگونیست به مدت سه ماه و آهن روزانه و سپس میومکتومی هیستروسکوپیک</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) سایر گزینه‌های جراحی مستقیم یا درمان دارویی دیگر</button>
+        </div>
+        <div id="q13-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف</p>
+          <p>در بیمار با Hb برابر ۸ و میوم ۵ سانتی‌متری، آگونیست GnRH سه‌ماهه با ایجاد آمنوره فرصت اصلاح آنمی با آهن را فراهم و با کوچک کردن میوم و کاهش خون‌رسانی رحم، جراحی هیستروسکوپیک را با میدان دید بهتر و ریسک کمتر پرفوراسیون امکان‌پذیر می‌کند.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۴ &middot; تکنیک هموستاز با وازوپرسین در میومکتومی هیستروسکوپیک</p>
+        <p class="text-slate-700 text-sm mb-3">خانم ۴۰ ساله با فیبروم ساب‌موکوس ۳ سانتی‌متری FIGO type 1 کاندید رزکسیون هیستروسکوپی است. کدام‌یک درباره تزریق وازوپرسین رقیق‌شده در سرویکس صحیح است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q14-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) تزریق حداقل ۲ سانتی‌متر در استرومای سرویکس باشد</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) تزریق در ساعات ۳ و ۹ باشد</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) در صورت اسپیراسیون خون، سوزن ۳ میلی‌متر عمیق‌تر در همان منطقه وارد و تزریق شود</button>
+          <button type="button" class="quiz-option" data-correct="true">د) تزریق در ساعات ۲، ۵، ۷ و ۱۰ باشد</button>
+        </div>
+        <div id="q14-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه د (ساعات ۲، ۵، ۷ و ۱۰)</p>
+          <p>بهترین محل تزریق ساعات ۲، ۵، ۷ و ۱۰ استرومای سرویکس است. تزریق در ساعات ۳ و ۹ به دلیل مجاورت شریان‌های اصلی رحمی مطلقاً ممنوع است. اسپیراسیون پیش از تزریق الزامی است و در صورت رویت خون هرگز نباید در همان محل دوباره تزریق کرد.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۵ &middot; اندیکاسیون رضایت برای جراحی دو مرحله‌ای میومکتومی</p>
+        <p class="text-slate-700 text-sm mb-3">در کدام‌یک از موارد زیر بهتر است اخذ اجازه two-staged hysteroscopic myomectomy در برگه رضایت بیمار گرفته شود؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q15-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) فیبروم FIGO type 1، اندازه ۱ سانتی‌متر</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) فیبروم FIGO type 0، اندازه ۳ سانتی‌متر</button>
+          <button type="button" class="quiz-option" data-correct="true">ج) فیبروم FIGO type 2، اندازه ۴ سانتی‌متر</button>
+          <button type="button" class="quiz-option" data-correct="false">د) فیبروم FIGO type 4، اندازه ۲ سانتی‌متر</button>
+        </div>
+        <div id="q15-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه ج</p>
+          <p>فیبروم‌های FIGO Type 2 بخش اینترامورال وسیعی دارند (بیش از ۵۰ درصد حجم درون میومتر). در سایز بزرگ (مثل ۴ سانتی‌متر)، ریسک پرفوراسیون و خونریزی بالاست، بنابراین جراحی اغلب دو مرحله‌ای برنامه‌ریزی می‌شود و اخذ رضایت آگاهانه مخصوص این پروسیجر الزامی است.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۶ &middot; روش تشخیصی ارجح برای رحم تک‌شاخ و شاخ فرعی</p>
+        <p class="text-slate-700 text-sm mb-3">در سونوگرافی مشکوک به رحم تک‌شاخ (unicornuate uterus) هستید. جهت بررسی شاخ غیرعملکردی (non-cavitary horn) کدام روش ارجح است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q16-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) MRI</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) TVS</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) داپلر</button>
+          <button type="button" class="quiz-option" data-correct="false">د) HSG</button>
+        </div>
+        <div id="q16-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف (MRI)</p>
+          <p>MRI استاندارد طلایی و دقیق‌ترین روش برای ارزیابی رحم تک‌شاخ همراه با شاخ فرعی است. HSG فقط شاخ عملکردی متصل به واژن را نشان می‌دهد و قادر به ارزیابی شاخ فرعی مسدود نیست؛ تشخیص دقیق برای پیشگیری از حاملگی اکتوپیک شاخی حیاتی است.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 7 : فاکتور لگنی و اندومتریوز ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-7">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white"><i class="fa-solid fa-droplet"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۷. فاکتور لگنی و اندومتریوز</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-7" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-notes-medical"></i> اندومتریوز و ناباروری</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-orange-500 mt-2 shrink-0"></i><span>مکانیسم: چسبندگی لگنی + اختلال آناتومی لوله-تخمدان + التهاب مزمن پریتوان + کاهش کیفیت تخمک/ذخیره تخمدانی (به‌ویژه اندومتریوما).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-orange-500 mt-2 shrink-0"></i><span>نرخ آنئوپلوئیدی جنینی: مشابه هم‌سالان در IVF — کیفیت کروموزومی تخمک حفظ، اما کمیت و محیط لانه‌گزینی تحت تأثیر.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-orange-500 mt-2 shrink-0"></i><span><span class="badge bg-emerald-100 text-emerald-700">استاندارد طلایی</span> لاپاراسکوپی: تشخیصی و درمانی هر دو.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-list-check"></i> استراتژی درمان ناباروری اندومتریوزی</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-orange-500 mt-2 shrink-0"></i><span>اندومتریوز خفیف–متوسط<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>اکسیزیون/ابلیشن لاپاراسکوپیک — بهبود بارداری خودبه‌خودی نسبت به عدم درمان.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-orange-500 mt-2 shrink-0"></i><span>اندومتریوز شدید + درد و ناباروری توأمان + تمایل بارداری سریع<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>جراحی اولیه ایده‌آل نیست (خطر کاهش بیشتر ذخیره تخمدانی).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-orange-500 mt-2 shrink-0"></i><span>چسبندگی لگنی (اندومتریوز/جراحی قبلی): علت مهم ناباروری فاکتور لگنی — مانع تماس فیمبریا-تخمدان.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <div class="telinde-box searchable-item rounded-xl p-4 mb-3">
+      <p class="flex items-center gap-2 font-black text-violet-700 mb-2"><i class="fa-solid fa-syringe"></i> نکته جراحی (Te Linde) — فلسفه اکسیزیون و یورترولیز</p>
+      <ul class="text-sm text-violet-900 space-y-1.5">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span><span class="badge bg-violet-200 text-violet-800">رویکرد انتخابی</span> اکسیزیون کامل جراحی ضایعات (نه ابلیشن/کوتر سطحی) — کاهش عود، بهبود دیس‌پارونی و بارداری خودبه‌خودی.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>ضایعات روی حالب: تکنیک «Push and Spread» (فشار و باز کردن شفت غیرتروماتیک)، بدون انرژی الکتریکی مستقیم روی حالب — حفظ خون‌رسانی.</span></li>
+      </ul>
+    </div>
+
+    <div class="telinde-box searchable-item rounded-xl p-4 mb-3">
+      <p class="flex items-center gap-2 font-black text-violet-700 mb-2"><i class="fa-solid fa-syringe"></i> نکته جراحی (Te Linde) — اندومتریوما و حفظ ذخیره تخمدانی</p>
+      <ul class="text-sm text-violet-900 space-y-1.5">
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>پیش از دیسکسیون دیواره کیست: تزریق وازوپرسین رقیق (~۲۰ واحد/۵۰–۱۰۰mL NS) به بافت/جدار کیست — کاهش خونریزی، بهبود دید.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>اندومتریوما بدون کپسول واقعی: شست‌وشوی مایع شکلاتی با ساکشن-ایریگاتور + جداسازی جدار کاذب با لایه‌برداری مکانیکی (Mechanical Stripping) از کورتکس سالم.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>هموستاز نهایی کورتکس: فقط بخیه ظریف قابل‌جذب یا هموستاتیک موضعی — <strong>نه کوتر</strong>.</span></li>
+        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-violet-500 mt-2 shrink-0"></i><span>پس از پاکسازی کامل لگن: Oophoropexy موقت به دیواره قدامی شکم (بخیه غیرقابل‌جذب، <strong>۷۲ ساعت</strong>) — کاهش شدید چسبندگی مجدد بن‌بست داگلاس.</span></li>
+      </ul>
+    </div>
+
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز کوتر روی تخمدان و روده</p>
+      <p class="text-sm text-red-900">کوتر برای هموستاز بافت تخمدان: ممنوع مطلق — تخریب دائمی فولیکول‌های سالم قشر. کوتر روی دیواره رکتوم حین دیسکسیون اندومتریوز عمقی رکتوواژینال: ممنوع مطلق (نکروز تأخیری، پرفوراسیون ثانویه روده) — هموستاز روده فقط با بخیه یا هموستاتیک موضعی.</p>
+    </div>
+    </div>
+
+    <!-- QUIZ SECTION 7 -->
+    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۲ &middot; مدیریت همزمان درد لگنی و ناباروری در اندومتریوز شدید</p>
+        <p class="text-slate-700 text-sm mb-3">خانم مبتلا به اندومتریوز شدید که از درد و نازایی توأمان شاکی است و خواهان بارداری در اسرع وقت است. بهترین توصیه کدام است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q2-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) مصرف ۳ ماه OCP و سپس درمان ناباروری</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) استفاده از آنالوگ GnRH و انجام پروتکل Long و IVF روتین</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) انجام لاپاراسکوپی و برطرف کردن چسبندگی‌ها سپس درمان ناباروری</button>
+          <button type="button" class="quiz-option" data-correct="true">د) انجام ART و freeze all، سپس درمان درد بیمار</button>
+        </div>
+        <div id="q2-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه د</p>
+          <p>در اندومتریوز شدید با درد و ناباروری توأمان و خواستار بارداری سریع، جراحی لاپاراسکوپی اولیه به دلیل خطر آسیب کورتکس تخمدان و کاهش بیشتر ذخیره تخمدانی ایده‌آل نیست. بهترین رویکرد، پونکسیون تخمدان و فریز تمام رویان‌ها (Freeze-all) در اولین فرصت است تا پتانسیل باروری حفظ شود؛ سپس درمان‌های تهاجمی‌تر برای درد آغاز و در نهایت انتقال جنین منجمد صورت می‌گیرد.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===================== SECTION 8 : ناباروری غیرقابل‌توضیح ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-8">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-slate-500 to-slate-700 flex items-center justify-center text-white"><i class="fa-solid fa-circle-question"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۸. ناباروری با علت نامشخص (Unexplained Infertility)</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-8" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item">
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-slate-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">تشخیص افتراقی:</strong> پس از ارزیابی کامل و طبیعی بودن سه محور اصلی (آنالیز اسپرم، تخمک‌گذاری، باز بودن لوله‌ها) + آناتومی طبیعی رحم.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-slate-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">مکانیسم‌های پیشنهادی:</strong> نقص خفیف کیفیت تخمک/اسپرم &middot; اختلال ظریف پذیرش آندومتر &middot; اندومتریوز خفیف تشخیص‌داده‌نشده &middot; عوامل ایمونولوژیک.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-slate-500 mt-2 shrink-0"></i><span>علل پنهان بالقوه: عفونت تحت‌بالینی دستگاه تناسلی &middot; پاتولوژی خفیف لگنی تشخیص‌داده‌نشده (اندومتریوز حداقلی).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-slate-500 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">خط اول</span> سوپراوولاسیون (کلومیفن/لتروزول یا گنادوتروپین دوز پایین) + IUI، به‌ویژه زوج جوان‌تر.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-slate-500 mt-2 shrink-0"></i><span>شکست چند سیکل سوپراوولاسیون+IUI یا سن مادر بالا<i class="fas fa-arrow-left action-arrow bg-slate-200 text-slate-600 text-[10px] mx-1"></i>پیشروی به IVF.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-slate-500 mt-2 shrink-0"></i><span>هزینه-اثربخشی: پیشروی سریع‌تر به IVF در سن بالاتر/ناباروری طولانی‌تر — بهتر از تکرار سیکل IUI.</span></li>
+    </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===================== SECTION 9 : فرآیند ART ===================== -->
+<div class="glass-card rounded-2xl overflow-hidden">
+  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-9">
+    <span class="flex items-center gap-3">
+      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white"><i class="fa-solid fa-flask-vial"></i></span>
+      <span class="font-black text-base sm:text-lg text-slate-800">۹. فرآیند ART، نرخ موفقیت و تولیدمثل شخص ثالث</span>
+    </span>
+    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+  </button>
+  <div id="acc-9" class="accordion-body hidden px-5 pb-6">
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-shield-halved"></i> پیشگیری از سرج زودرس LH — آگونیست و آنتاگونیست GnRH</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>تجویز اولیه آگونیست GnRH<i class="fas fa-arrow-left action-arrow bg-indigo-100 text-indigo-600 text-[10px] mx-1"></i>اثر Flare (ترشح ناگهانی FSH/LH، شدیدترین در اوایل فاز فولیکولار)<i class="fas fa-arrow-left action-arrow bg-indigo-100 text-indigo-600 text-[10px] mx-1"></i>اشغال مداوم گیرنده<i class="fas fa-arrow-left action-arrow bg-indigo-100 text-indigo-600 text-[10px] mx-1"></i>داون‌رگولاسیون هیپوفیزی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">پروتکل‌های آگونیست:</strong> Long (شروع فاز لوتئال سیکل قبل) &middot; microdose flare (پاسخ‌دهنده ضعیف).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">آنتاگونیست GnRH:</strong> اشغال رقابتی گیرنده — مسدود فوری سرج LH، بدون Flare؛ تجویز میانه تحریک (ثابت روز ۶ یا انعطاف‌پذیر بر اساس سایز فولیکول).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>آنتاگونیست در برابر آگونیست: طول درمان کوتاه‌تر، دوز گنادوتروپین کمتر، OHSS پایین‌تر، امکان تریگر با آگونیست GnRH.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>پیش‌درمانی OC ترکیبی (۱۴–۲۸ روز): هماهنگ‌سازی رشد فولیکولی، کاهش لغو سیکل — در سیکل آنتاگونیست کاهش خفیف بارداری، در سیکل آگونیست نرخ بارداری بالاتر.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-chart-simple"></i> رشد فولیکولی، مانیتورینگ و دوز تحریک</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">مانیتورینگ استاندارد:</strong> سونوگرافی سایز فولیکول + استرادیول سرمی — E2 بهینه روز تریگر: <strong>۷۰–۱۴۰ pg/mL</strong> به‌ازای هر فولیکول.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>هر ۱۰۰ IU گنادوتروپین اضافی<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>۲٪ کاهش نرخ بارداری/تولد زنده — دوز بیشتر همیشه بهتر نیست.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>دوز شروع رایج (پاسخ‌دهنده نرمال جوان): <strong>۳۰۰ IU/day FSH</strong> &middot; تحریک مینیمال (کلومیفن+گنادوتروپین دوز پایین): هدف &le;۴–۸ اووسیت.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>بازده بهینه اووسیت (انتقال تازه، سیکل اتولوگ): <strong>۱۵–۲۵</strong> &middot; برداشت &gt;۱۵ اووسیت<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>بالاترین تولد زنده تجمعی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>تولد زنده/اووسیت: <strong>۱۱.۳٪</strong> (زیر ۳۵ سال) در برابر <strong>۱.۲٪</strong> (بالای ۴۲ سال).</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-bullseye"></i> تریگر تخمک‌گذاری و برداشت اووسیت</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>hCG (جایگزین سرج طبیعی LH): نیمه‌عمر بسیار طولانی‌تر — <strong>۲.۳۲ روز</strong> در برابر ۱–۵ ساعت (LH).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>معیار تریگر: &ge;۲ فولیکول قطر <strong>۱۷–۱۸mm</strong> + آندومتر &ge;<strong>۸mm</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>برداشت اووسیت بهینه: <strong>۳۶–۳۷ ساعت</strong> پس از تریگر — زودتر بازده کمتر، دیرتر خطر تخمک‌گذاری خودبه‌خودی (پارگی خودبه‌خودی میانگین ۳۸.۳ ساعت).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>پرخطر OHSS<i class="fas fa-arrow-left action-arrow bg-indigo-100 text-indigo-600 text-[10px] mx-1"></i>تریگر با آگونیست GnRH به‌جای hCG (سیکل آنتاگونیست).</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-egg"></i> لقاح (IVF یا ICSI) و کشت جنین</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>IVF متعارف: <strong>۱۰۰٬۰۰۰–۸۰۰٬۰۰۰</strong> اسپرم متحرک/mL به‌ازای هر اووسیت.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>ارزیابی لقاح: <strong>۱۵–۲۰ ساعت</strong> پس از تلقیح/ICSI (۲ پرونوکلئوس) &middot; اولین کلیواژ ~۲۱ ساعت، تقسیم هر ۱۲–۱۵ ساعت تا ۸ سلولی روز ۳.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>مورولا: روز ۴ &middot; بلاستوسیست کامل: روز ۵–۶.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>ناهنجاری کروموزومی: cleavage با مورفولوژی طبیعی ~۶۰٪ &middot; بلاستوسیست فقط ۳۰٪ — کشت طولانی: انتخاب بهتر جنین.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>انتقال بلاستوسیست تازه در برابر cleavage-stage: بارداری تا <strong>+۱۰٪</strong>، تولد زنده تا <strong>+۱۳٪</strong>.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">Gardner-Schoolcraft:</strong> درجه ۱ (بدترین) تا ۶ (بهترین) + درجه A–C (توده سلولی داخلی، تروفکتودرم).</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-arrow-right-to-bracket"></i> انتقال جنین (Embryo Transfer)</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><span class="badge bg-emerald-100 text-emerald-700">استاندارد</span> جنین یوپلوئید شناخته‌شده: انتقال تک جنین، صرف‌نظر از سن/مرحله.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>هدایت سونوگرافی شکمی/ترانس‌واژینال: استقرار کاتتر ناحیه بالایی-میانی حفره (&ge;۱cm از فوندوس).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>پس از انتقال: ترخیص فوری — بدون نیاز به استراحت مطلق تخت.</span></li>
+    </ul>
+    <div class="overflow-x-auto rounded-xl border border-slate-200">
+      <table class="gv-table w-full text-sm whitespace-nowrap">
+        <thead class="bg-indigo-50 text-indigo-700 font-black"><tr><th>سن</th><th>حداکثر جنین Cleavage-stage</th></tr></thead>
+        <tbody>
+          <tr><td class="font-bold">زیر ۳۵ سال</td><td>۲ جنین</td></tr>
+          <tr><td class="font-bold">۳۵–۳۷ سال</td><td>۳ جنین</td></tr>
+          <tr><td class="font-bold">۳۸–۴۰ سال</td><td>۴ جنین</td></tr>
+          <tr><td class="font-bold">بالای ۴۰ سال</td><td>۵ جنین</td></tr>
+          <tr><td class="font-bold">هر سنی (بلاستوسیست)</td><td>حداکثر ۳</td></tr>
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-snowflake"></i> کرایوپرزرواسیون جنین و آماده‌سازی FET</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ویتریفیکیشن</strong> (انجماد سریع): بقای پس از ذوب <strong>۹۳٪</strong> در برابر <strong>۷۶٪</strong> (انجماد آهسته).</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>استراتژی freeze-all<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>کاهش چشمگیر OHSS دیررس؛ تولد زنده FET اکنون برابر انتقال تازه.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>FET دارویی: استروژن تا آندومتر &ge;<strong>۶.۵–۸mm</strong> &middot; پروژسترون از ۴۸–۷۲ ساعت (cleavage) یا ۶–۷ روز (بلاستوسیست) پیش از انتقال.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>FET سیکل طبیعی: بروز پره‌اکلامپسی کمتر نسبت به FET دارویی.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-award"></i> نرخ‌های موفقیت ART</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>سن بیمار: مهم‌ترین پیش‌بینی‌کننده موفقیت IVF — &gt;<strong>۵۰٪</strong> اهمیت نسبی کل پیش‌بینی‌کننده‌ها.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>ASRM: «پیش‌آگهی بسیار ضعیف» = تولد زنده <strong>۱–۵٪</strong> &middot; «بی‌فایده» (Futile) = &lt;۱٪.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>تخمک خودی: سن ۴۴–۴۵ سالگی <strong>۱–۲٪</strong> تولد زنده &middot; بالای ۴۵ سالگی &lt;۱٪.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>تخمک اهدایی (تازه/منجمد): تولد زنده <strong>۴۰–۴۷٪</strong>، صرف‌نظر از سن گیرنده.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>زیر ۳۵ سال: چندقلویی رتبه بالا (&ge;سه‌قلو) <strong>۶.۴٪</strong>(۲۰۰۳)<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>~صفر (۲۰۲۰) — نتیجه گسترش انتقال تک جنین.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item mb-5">
+    <p class="sub-h"><i class="fa-solid fa-people-arrows"></i> تولیدمثل شخص ثالث و کرایوپرزرواسیون اووسیت</p>
+    <ul class="space-y-2 text-slate-700 text-[15px]">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کاندید تخمک اهدایی:</strong> نارسایی زودرس تخمدان &middot; کیفیت پایین اووسیت &middot; پاسخ ضعیف مکرر &middot; شکست تکرارشونده لقاح/لانه‌گزینی.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>کرایوپرزرواسیون اووسیت (از ۲۰۱۲): دیگر آزمایشی نیست — بقا و ایمنی مشابه IVF.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>&ge;۲۰ اووسیت بالغ منجمد در سن &lt;۳۸ سال<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>&gt;۵۰٪ احتمال حداقل یک تولد زنده.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>Surrogacy واقعی (Gestational Carrier): مادر زایمان‌کننده غیرژنتیکی — مشاوره حقوقی و روانی-اجتماعی الزامی برای همه طرفین.</span></li>
+    </ul>
+    </div>
+
+    <div class="searchable-item">
+    <p class="sub-h"><i class="fa-solid fa-ribbon"></i> حفظ باروری در بیماران سرطانی</p>
+    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>تشخیص جدید سرطان + برنامه باروری<i class="fas fa-arrow-left action-arrow bg-indigo-100 text-indigo-600 text-[10px] mx-1"></i>ارجاع فوری به غدد تولیدمثل؛ در صورت زمان کافی: یک سیکل ART + کرایو جنین/اووسیت.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">OTC</strong> (کرایوپرزرواسیون بافت تخمدان): تنها گزینه در دختران پیش از بلوغ؛ کاربرد نیز وقتی تأخیر گنادوتوکسیک &lt;۲ هفته ممکن نیست.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>سرطان پستان ER-مثبت: تحریک استاندارد ممنوع (افزایش خطرناک استرادیول)<i class="fas fa-arrow-left action-arrow bg-indigo-100 text-indigo-600 text-[10px] mx-1"></i>پروتکل مهارکننده آروماتاز (لتروزول) + FSH.</span></li>
+      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-500 mt-2 shrink-0"></i><span>ترانسپوزیشن تخمدان پیش از رادیوتراپی + آگونیست GnRH هم‌زمان شیمی‌درمانی: حفظ نسبی عملکرد — جایگزین کرایوپرزرواسیون نیستند.</span></li>
+    </ul>
+    <div class="redflag-box searchable-item rounded-xl p-4">
+      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز OTC در بدخیمی خونی</p>
+      <p class="text-sm text-red-900">کرایوپرزرواسیون بافت تخمدان در بیماری با احتمال سلول بدخیم در خود بافت (لوسمی): ممنوع مطلق — خطر بازکاشت تومور هنگام پیوند آینده.</p>
+    </div>
+    </div>
+
+    <!-- QUIZ SECTION 9 -->
+    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۴ &middot; تحریک تخمدان برای حفظ باروری در سرطان‌های حساس به هورمون</p>
+        <p class="text-slate-700 text-sm mb-3">خانمی ۳۰ ساله با کانسر پستان ER مثبت مراجعه کرده است. اقدام مناسب جهت حفظ باروری قبل از شیمی‌درمانی کدام است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q4-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) فریز بافت تخمدان</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) تجویز GnRH agonist طولانی‌اثر</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) فریز تخمک پس از تحریک با حداقل دوز گنادوتروپین</button>
+          <button type="button" class="quiz-option" data-correct="true">د) فریز تخمک پس از تحریک با مهارکننده آروماتاز و FSH</button>
+        </div>
+        <div id="q4-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه د</p>
+          <p>در سرطان پستان ER-مثبت، تحریک تخمدانی استاندارد به دلیل افزایش شدید استرادیول خطرناک است. پروتکل تحریک همراه با مهارکننده آروماتاز (لتروزول) و FSH طراحی شده تا لتروزول با مهار تبدیل آندروژن به استروژن، سطح استرادیول را پایین نگه دارد در حالی که گنادوتروپین رشد فولیکولی را هدایت می‌کند.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۵ &middot; حفظ باروری در بیماران سرطانی پره‌منارک</p>
+        <p class="text-slate-700 text-sm mb-3">در یک دختر ۱۰ ساله مبتلا به لنفوم، بدون تظاهرات بلوغ، جهت حفظ باروری چه روشی را پیشنهاد می‌دهید؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q5-answer">
+          <button type="button" class="quiz-option" data-correct="false">الف) تجویز مهارکننده آروماتاز</button>
+          <button type="button" class="quiz-option" data-correct="true">ب) انجماد بافت تخمدان</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) آنتاگونیست گنادوتروپین</button>
+          <button type="button" class="quiz-option" data-correct="false">د) تغییر محل تخمدان</button>
+        </div>
+        <div id="q5-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه ب</p>
+          <p>در دختران پیش از بلوغ، به دلیل عدم تکامل محور HPO، تحریک تخمدانی و برداشت اووسیت امکان‌پذیر نیست. تنها روش تأییدشده حفظ باروری پیش از شیمی‌درمانی یا رادیوتراپی گنادوتوکسیک، برداشت جراحی بخشی از کورتکس تخمدان و انجماد بافت تخمدان (OTC) است.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۶ &middot; تجمیع جنین (DuoStim/Embryo Pooling) در ذخیره تخمدانی بسیار ضعیف</p>
+        <p class="text-slate-700 text-sm mb-3">خانم ۴۴ ساله با AFC برابر ۲ در هر تخمدان و فاکتور مردانه، وارد سیکل آنتاگونیست شده؛ در سابقه ۲ بار سیکل ART با فقط یک جنین فریز در هر بار داشته است. بهترین اقدام کدام است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q6-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) تکرار سیکل‌های متوالی و اضافه کردن جنین (Embryo Pooling)</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) سایر گزینه‌ها مانند انتقال فوری یا اهدای تخمک</button>
+        </div>
+        <div id="q6-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف</p>
+          <p>در سن بالا با DOR شدید و فاکتور مردانه همراه، نرخ آنئوپلوئیدی جنینی بسیار بالاست و انتقال تک‌جنین در هر سیکل شانس موفقیت پایینی دارد. بهترین رویکرد، تکرار تحریک‌های متوالی (Embryo Pooling/DuoStim) برای جمع‌آوری جنین‌های بیشتر است تا شانس یافتن حداقل یک رویان یوپلوئید افزایش یابد.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۰ &middot; مکانیسم مولکولی شکست باروری در ICSI</p>
+        <p class="text-slate-700 text-sm mb-3">بیمار ۳۴ ساله با فاکتور مردانه (الیگواستنوتراتوزواسپرمی شدید) پس از چندین بار ICSI دچار شکست مکرر لقاح (Repeated Fertilization Failure) شده است. کدام فرآیند مولکولی محتمل‌ترین علت است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q10-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) شکست در فعال شدن اووسیت</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) نقص ZP3 و القای واکنش آکروزومی</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) ناتوانی اسپرم در اتصال به گیرنده زونا پلوسیدا</button>
+          <button type="button" class="quiz-option" data-correct="false">د) جهش در گیرنده‌های اینتگرین غشای اووسیت</button>
+        </div>
+        <div id="q10-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف</p>
+          <p>در ICSI اسپرم مستقیماً از زونا پلوسیدا عبور داده می‌شود، بنابراین نقص اتصال به ZP3 یا واکنش آکروزومی عامل شکست نیست. علت اصلی شکست مکرر لقاح در ICSI، عدم فعال‌سازی اووسیت است؛ نقص در فاکتور فعال‌کننده اسپرمی (مانند PLC-zeta) مانع نوسان کلسیم درون‌سلولی و خروج تخمک از متافاز ۲ می‌شود.</p>
+        </div>
+      </div>
+
+      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+        <p class="font-bold text-slate-800 mb-2">سوال ۱۱ &middot; اثر فارماکولوژیک آگونیست GnRH بر اساس زمان تجویز</p>
+        <p class="text-slate-700 text-sm mb-3">در کدام قسمت سیکل قاعدگی اثر Flare (برانگیختگی اولیه آگونیست GnRH) شدیدتر است؟</p>
+        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q11-answer">
+          <button type="button" class="quiz-option" data-correct="true">الف) اوایل فاز فولیکولار</button>
+          <button type="button" class="quiz-option" data-correct="false">ب) اواخر فاز فولیکولار</button>
+          <button type="button" class="quiz-option" data-correct="false">ج) میان‌سیکل</button>
+          <button type="button" class="quiz-option" data-correct="false">د) میان‌لوتئال</button>
+        </div>
+        <div id="q11-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+          <p class="font-black mb-1">پاسخ صحیح: گزینه الف</p>
+          <p>اثر Flare (ترشح ناگهانی FSH/LH) با تجویز اولیه آگونیست GnRH در اوایل فاز فولیکولار شدیدترین حالت را دارد، زیرا ذخایر گنادوتروپین هیپوفیزی در این زمان بالاست و هنوز تحت فیدبک منفی شدید استروژن فازهای بعدی قرار نگرفته است.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- SECTIONS_PLACEHOLDER -->
+
+    </div>
+  </section>
+
+  <!-- ================= TAB 2: خطوط قرمز ================= -->
+  <section id="tab-redflags" class="tab-content hidden">
+    <div class="glass-card rounded-2xl p-5 mb-5">
+      <h2 class="font-black text-xl text-red-700 flex items-center gap-2"><i class="fa-solid fa-triangle-exclamation"></i> خطوط قرمز فصل ناباروری و ART</h2>
+      <p class="text-sm text-slate-500 font-bold mt-1">تمام موارد «مطلقاً ممنوع» و اقدامات پرخطری که پاسخ غلط آن‌ها در بورد رایج است — دسته‌بندی‌شده بر اساس موضوع.</p>
+    </div>
+    <div id="redflags-wrap" class="space-y-4">
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جمع‌آوری نمونه</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور مردانه (آندرولوژی بالینی)</span>
+        </p>
+        <p class="text-sm text-red-900"><strong>کاندوم لاتکس معمولی:</strong> سمی برای اسپرم — ممنوع مطلق. فقط کاندوم مخصوص آنالیز اسپرم مجاز. لوبریکنت‌های Astroglide، KY Jelly، بزاق، روغن زیتون: مهار تحرک اسپرم.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز تستوسترون‌درمانی</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور مردانه (آندرولوژی بالینی)</span>
+        </p>
+        <p class="text-sm text-red-900">تستوسترون اگزوژن در ساب‌فرتیلیتی مردانه (غیرآزواسپرمی): ممنوع مطلق — بازخورد منفی هیپوفیزی، کاهش تستوسترون داخل‌بیضه‌ای و اسپرماتوژنز.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جراحی واریکوسل</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور مردانه (آندرولوژی بالینی)</span>
+        </p>
+        <p class="text-sm text-red-900">جراحی واریکوسل در آزواسپرمی غیرانسدادی (نارسایی بیضه): ممنوع مطلق.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز اسپرم اهدایی</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور مردانه (آندرولوژی بالینی)</span>
+        </p>
+        <p class="text-sm text-red-900"><strong>اسپرم اهدایی تازه:</strong> ممنوع مطلق (CDC/ASRM) — خطر انتقال HIV. فقط نمونه منجمد و قرنطینه &ge;۶ ماه با بازآزمایش اهداکننده مجاز. اهداکننده با سابقه خانوادگی اختلال غالب/وابسته به X: مستثنا مطلق.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز بیوپسی بیضه</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور مردانه (آندرولوژی بالینی)</span>
+        </p>
+        <p class="text-sm text-red-900">آزواسپرمی هیپرگنادوتروپیک (نارسایی بیضه‌ای، LH/FSH بالا + تستوسترون پایین): بیوپسی بیضه توصیه نمی‌شود — اسپرم اهدایی مدنظر.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز کیت LH</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور تخمک‌گذاری و PCOS</span>
+        </p>
+        <p class="text-sm text-red-900">کیت LH ادراری در سیکل نامنظم: غیرقابل‌اتکا مطلق (مثبت کاذب تا ۷٪ سیکل‌ها، به‌ویژه PCOS).</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز کلومیفن سیترات</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور تخمک‌گذاری و PCOS</span>
+        </p>
+        <p class="text-sm text-red-900">اختلال بینایی حین مصرف کلومیفن سیترات: قطع فوری و مطلق دارو.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خطر HSG</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور لوله‌ای (Tubal Factor)</span>
+        </p>
+        <p class="text-sm text-red-900">HSG<i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>خطر فعال شدن مجدد عفونت لگنی خاموش؛ در پرخطر یا سابقه هیدروسالپینکس، پروفیلاکسی آنتی‌بیوتیکی مدنظر.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز تزریق وازوپرسین سرویکس</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور رحمی (Uterine Factors)</span>
+        </p>
+        <p class="text-sm text-red-900">تزریق در ساعات ۳ و ۹ سرویکس: ممنوع مطلق (مجاورت شریان‌های اصلی رحمی — خطر آریتمی، برادی‌کاردی، افزایش شدید فشار خون). آسپیراسیون الزامی پیش از هر تزریق؛ در صورت مشاهده خون، هرگز تزریق مجدد در همان نقطه.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز دفیست مایع هیستروسکوپی</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور رحمی (Uterine Factors)</span>
+        </p>
+        <p class="text-sm text-red-900">هیستروسکوپی مونوپولار با مایع غیریونی کم‌اسموالار (گلایسین ۱.۵٪، سوربیتول ۳٪، مانیتول ۵٪): دفیست &ge;<strong>۱۵۰۰ mL</strong><i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>توقف فوری جراحی — خطر هیپوناترمی کشنده و عوارض مغزی-عروقی. مورسیلاتور/HTRS فاقد انعقاد عروقی؛ خونریزی<i class="fas fa-arrow-left action-arrow bg-red-200 text-red-700 text-[10px] mx-1"></i>وازوپرسین سرویکسی یا کاتتر فولی تامپوناد.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز بخیه اندومتر</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور رحمی (Uterine Factors)</span>
+        </p>
+        <p class="text-sm text-red-900">ترمیم لایه اندومتر پس از میومکتومی: ورود نخ/سوزن بخیه به فضای داخلی حفره رحم — ممنوع مطلق (ریسک بالای سینشی و انسداد حفره).</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز کوتر روی تخمدان و روده</span>
+          <span class="badge bg-red-100 text-red-600">فاکتور لگنی و اندومتریوز</span>
+        </p>
+        <p class="text-sm text-red-900">کوتر برای هموستاز بافت تخمدان: ممنوع مطلق — تخریب دائمی فولیکول‌های سالم قشر. کوتر روی دیواره رکتوم حین دیسکسیون اندومتریوز عمقی رکتوواژینال: ممنوع مطلق (نکروز تأخیری، پرفوراسیون ثانویه روده) — هموستاز روده فقط با بخیه یا هموستاتیک موضعی.</p>
+      </div>
+      <div class="redflag-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-red-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز OTC در بدخیمی خونی</span>
+          <span class="badge bg-red-100 text-red-600">فرآیند ART، نرخ موفقیت و تولیدمثل شخص ثالث</span>
+        </p>
+        <p class="text-sm text-red-900">کرایوپرزرواسیون بافت تخمدان در بیماری با احتمال سلول بدخیم در خود بافت (لوسمی): ممنوع مطلق — خطر بازکاشت تومور هنگام پیوند آینده.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TAB 3: مقادیر طلایی ================= -->
+  <section id="tab-golden" class="tab-content hidden">
+    <div class="glass-card rounded-2xl p-5 mb-5">
+      <h2 class="font-black text-xl text-amber-700 flex items-center gap-2"><i class="fa-solid fa-star"></i> مقادیر طلایی و کات‌آف‌های عددی</h2>
+      <p class="text-sm text-slate-500 font-bold mt-1">تمام اعداد، دوزها و آستانه‌های کلیدی که مستقیماً محل طراحی سوال بورد هستند.</p>
+    </div>
+    <div id="golden-wrap" class="space-y-4">
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-3">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> مارکرهای ذخیره تخمدانی</span>
+          <span class="badge bg-amber-100 text-amber-700">سن باروری و ذخیره تخمدانی</span>
+        </p>
+        <div class="overflow-x-auto rounded-lg border border-amber-200 bg-white/60">
+          <table class="w-full text-sm whitespace-nowrap">
+            <thead class="bg-amber-100 text-amber-800 font-black"><tr><th class="p-2 text-right">مارکر</th><th class="p-2 text-right">کات‌آف</th><th class="p-2 text-right">معنی</th></tr></thead>
+            <tbody class="text-amber-900">
+              <tr><td class="p-2 font-bold">AMH</td><td class="p-2">&gt;۳.۵ ng/mL</td><td class="p-2">پاسخ بیش از حد</td></tr>
+              <tr><td class="p-2 font-bold">AMH</td><td class="p-2">&lt;۱ ng/mL</td><td class="p-2">پاسخ ضعیف</td></tr>
+              <tr><td class="p-2 font-bold">AFC (۲–۱۰mm)</td><td class="p-2">&lt;۴</td><td class="p-2">پاسخ ضعیف، لغو سیکل بالاتر</td></tr>
+              <tr><td class="p-2 font-bold">FSH پایه روز ۳</td><td class="p-2">&ge;۱۲ mIU/mL</td><td class="p-2">آستانه بالا</td></tr>
+              <tr><td class="p-2 font-bold">FSH (دهه ۴۰)</td><td class="p-2">&gt;۲۰ IU/L</td><td class="p-2">پیش‌بینی‌کننده یائسگی</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> زمان‌بندی شروع ارزیابی ناباروری</span>
+          <span class="badge bg-amber-100 text-amber-700">کلیات و ارزیابی اولیه</span>
+        </p>
+        <p class="text-sm text-amber-900">سن زن &lt;۳۵ سال: شروع پس از <strong>۱۲ ماه</strong> ناباروری &middot; سن زن &ge;۳۵ سال: شروع پس از <strong>۶ ماه</strong> &middot; بالای ۴۰ سال: ارزیابی فوری بدون تأخیر.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> آنالیز اسپرم — کات‌آف‌های نمونه‌گیری</span>
+          <span class="badge bg-amber-100 text-amber-700">فاکتور مردانه</span>
+        </p>
+        <p class="text-sm text-amber-900">پرهیز از انزال: <strong>۲–۷ روز</strong> (IUI: &le;۲ روز) &middot; رسیدن به آزمایشگاه: &le;<strong>۳۰ دقیقه</strong> (حداکثر ۵۰) &middot; حجم طبیعی: <strong>۱–۵ mL</strong> &middot; معیار Kruger مورفولوژی طبیعی: &lt;<strong>۹٪</strong> &middot; TMSC برای IUI: &ge;<strong>۹ میلیون</strong>.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> کلومیفن و لتروزول</span>
+          <span class="badge bg-amber-100 text-amber-700">فاکتور تخمک‌گذاری و PCOS</span>
+        </p>
+        <p class="text-sm text-amber-900">۶ ماه کلومیفن: تخمک‌گذاری <strong>۴۹٪</strong>، تولد زنده <strong>۲۲.۵٪</strong> &middot; دوز مقایسه‌ای: لتروزول <strong>۲.۵mg</strong> در برابر کلومیفن <strong>۵۰mg</strong> &middot; نیمه‌عمر لتروزول <strong>۴۸ ساعت</strong> در برابر کلومیفن ۲ هفته.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> طبقه‌بندی FIGO/ESH فیبروم</span>
+          <span class="badge bg-amber-100 text-amber-700">فاکتور رحمی</span>
+        </p>
+        <p class="text-sm text-amber-900">نوع ۰: کاملاً داخل حفره‌ای &middot; نوع ۱: نفوذ &lt;۵۰٪ میومتر &middot; نوع ۲: نفوذ &gt;۵۰٪ &middot; نوع ۳–۸: اینترامورال/ساب‌سروزال (ممنوع هیستروسکوپی). سایز بحرانی جراحی دو‌مرحله‌ای: &gt;<strong>۴–۶ سانتی‌متر</strong>.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> تزریق وازوپرسین سرویکس</span>
+          <span class="badge bg-amber-100 text-amber-700">فاکتور رحمی</span>
+        </p>
+        <p class="text-sm text-amber-900">غلظت: <strong>۲۰ واحد/۲۰۰mL</strong> نرمال سالین &middot; محل مجاز: ساعات <strong>۱۰، ۲، ۵، ۷</strong> (هرکدام ۵mL، عمق ۱cm) &middot; محل ممنوع مطلق: ساعات ۳ و ۹ &middot; آستانه توقف دفیست مایع هیستروسکوپی: &ge;<strong>۱۵۰۰ mL</strong>.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> تحریک تخمدان، تریگر و برداشت اووسیت</span>
+          <span class="badge bg-amber-100 text-amber-700">فرآیند ART</span>
+        </p>
+        <p class="text-sm text-amber-900">E2 بهینه روز تریگر: <strong>۷۰–۱۴۰ pg/mL</strong>/فولیکول &middot; معیار تریگر: &ge;۲ فولیکول <strong>۱۷–۱۸mm</strong> + آندومتر &ge;<strong>۸mm</strong> &middot; برداشت اووسیت: <strong>۳۶–۳۷ ساعت</strong> پس از تریگر hCG &middot; بازده بهینه اووسیت: <strong>۱۵–۲۵</strong>.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> انتقال جنین — حداکثر تعداد بر اساس سن</span>
+          <span class="badge bg-amber-100 text-amber-700">فرآیند ART</span>
+        </p>
+        <div class="overflow-x-auto rounded-lg border border-amber-200 bg-white/60">
+          <table class="w-full text-sm whitespace-nowrap">
+            <thead class="bg-amber-100 text-amber-800 font-black"><tr><th class="p-2 text-right">سن</th><th class="p-2 text-right">حداکثر Cleavage-stage</th></tr></thead>
+            <tbody class="text-amber-900">
+              <tr><td class="p-2 font-bold">زیر ۳۵ سال</td><td class="p-2">۲ جنین</td></tr>
+              <tr><td class="p-2 font-bold">۳۵–۳۷ سال</td><td class="p-2">۳ جنین</td></tr>
+              <tr><td class="p-2 font-bold">۳۸–۴۰ سال</td><td class="p-2">۴ جنین</td></tr>
+              <tr><td class="p-2 font-bold">بالای ۴۰ سال</td><td class="p-2">۵ جنین</td></tr>
+              <tr><td class="p-2 font-bold">بلاستوسیست (هر سنی)</td><td class="p-2">حداکثر ۳</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> FET و کرایوپرزرواسیون</span>
+          <span class="badge bg-amber-100 text-amber-700">فرآیند ART</span>
+        </p>
+        <p class="text-sm text-amber-900">بقای ویتریفیکیشن: <strong>۹۳٪</strong> در برابر ۷۶٪ (انجماد آهسته) &middot; آندومتر FET دارویی: &ge;<strong>۶.۵–۸mm</strong> &middot; شروع پروژسترون: <strong>۴۸–۷۲ ساعت</strong> (cleavage) یا <strong>۶–۷ روز</strong> (بلاستوسیست) پیش از انتقال.</p>
+      </div>
+
+      <div class="golden-box rounded-xl p-4">
+        <p class="flex items-center justify-between gap-2 flex-wrap font-black text-amber-700 mb-2">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-star"></i> پیش‌آگهی ART بر اساس سن</span>
+          <span class="badge bg-amber-100 text-amber-700">فرآیند ART</span>
+        </p>
+        <p class="text-sm text-amber-900">ASRM «بسیار ضعیف»: تولد زنده <strong>۱–۵٪</strong> &middot; «بی‌فایده» (Futile): &lt;۱٪ &middot; سن ۴۴–۴۵: <strong>۱–۲٪</strong> با تخمک خودی &middot; تخمک اهدایی: <strong>۴۰–۴۷٪</strong> صرف‌نظر از سن گیرنده.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+document.addEventListener('click', function(e){
+  var accHeader = e.target.closest('.accordion-header');
+  if(accHeader){
+    var body = document.getElementById(accHeader.dataset.target);
+    var icon = accHeader.querySelector('.accordion-icon');
+    if(body){ body.classList.toggle('hidden'); }
+    if(icon){ icon.classList.toggle('rotate-180'); }
+    return;
+  }
+  var opt = e.target.closest('.quiz-option');
+  if(opt){
+    var group = opt.closest('.quiz-options');
+    if(group && group.dataset.answered === 'false'){
+      group.dataset.answered = 'true';
+      group.querySelectorAll('.quiz-option').forEach(function(btn){
+        btn.disabled = true;
+        if(btn.dataset.correct === 'true'){ btn.classList.add('correct'); }
+        else if(btn === opt){ btn.classList.add('wrong'); }
+      });
+      var ans = document.getElementById(group.dataset.target);
+      if(ans){ ans.classList.remove('hidden'); }
+    }
+    return;
+  }
+  var tabBtn = e.target.closest('.tab-btn');
+  if(tabBtn){
+    document.querySelectorAll('.tab-content').forEach(function(el){ el.classList.add('hidden'); });
+    var target = document.getElementById(tabBtn.dataset.tab);
+    if(target){ target.classList.remove('hidden'); }
+    document.querySelectorAll('.tab-btn').forEach(function(b){ b.classList.remove('tab-active'); });
+    tabBtn.classList.add('tab-active');
+    window.scrollTo({top:0, behavior:'smooth'});
+    return;
+  }
+});
+
+var searchInput = document.getElementById('searchInput');
+if(searchInput){
+  searchInput.addEventListener('input', function(){
+    var q = searchInput.value.trim().toLowerCase();
+    document.querySelectorAll('.searchable-item').forEach(function(item){
+      var text = item.textContent.toLowerCase();
+      var match = q === '' || text.indexOf(q) !== -1;
+      item.classList.toggle('search-hidden', !match);
+      if(match && q.length > 2){
+        var body = item.closest('.accordion-body');
+        if(body){
+          body.classList.remove('hidden');
+          var header = document.querySelector('.accordion-header[data-target="' + body.id + '"]');
+          if(header){
+            var icon = header.querySelector('.accordion-icon');
+            if(icon){ icon.classList.add('rotate-180'); }
+          }
+        }
+      }
+    });
+  });
+}
+</script>
+</body>
+</html>
