@@ -1,165 +1,263 @@
-<div class="glass-card rounded-2xl overflow-hidden">
-  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-1">
-    <span class="flex items-center gap-3">
-      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white"><i class="fa-solid fa-clipboard-list"></i></span>
-      <span class="font-black text-base sm:text-lg text-slate-800">۱. کلیات، اپیدمیولوژی و ارزیابی اولیه زوج نابارور</span>
-    </span>
-    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
-  </button>
-  <div id="acc-1" class="accordion-body hidden px-5 pb-6">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بخش اول: کلیات و ارزیابی اولیه</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+    body { font-family: 'Vazirmatn', sans-serif; background-color: #f8fafc; padding: 1rem; }
+    .glass-card { background: rgba(255, 255, 255, 0.95); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+    .accordion-header { transition: background-color 0.3s; cursor: pointer; }
+    .accordion-header:hover { background-color: #f1f5f9; }
+    .accordion-icon { transition: transform 0.3s; }
+    .accordion-header.active .accordion-icon { transform: rotate(180deg); }
+    .sub-h { font-size: 1.125rem; font-weight: 800; color: #3730a3; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .badge { padding: 0.15rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
+    .gv-table th, .gv-table td { padding: 0.75rem; text-align: right; border-bottom: 1px solid #e2e8f0; }
+    .action-arrow { padding: 0.2rem; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; }
+  </style>
+</head>
+<body>
 
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-book"></i> تعاریف پایه</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری:</strong> عدم بارداری پس از <strong>۱ سال</strong> نزدیکی منظم بدون پیشگیری.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">تعریف ASRM</span> ناباروری = بیماری، وضعیت یا نیاز به مداخله پزشکی برای دستیابی به بارداری موفق.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری اولیه:</strong> هیچ بارداری قبلی نداشته باشد. <strong class="font-bold text-slate-900">ناباروری ثانویه:</strong> یکی یا چند بارداری قبلی داشته باشد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">Fecundability:</strong> احتمال بارداری در هر سیکل. <strong class="font-bold text-slate-900">Fecundity:</strong> احتمال تولد زنده.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">Impaired fecundity:</strong> ≥۳۶ ماه تلاش ناموفق یا مشکل فیزیکی در باردار شدن.</span></li>
-      </ul>
+<div class="max-w-4xl mx-auto">
+  <!-- Section 1 Content -->
+  <div class="glass-card rounded-2xl overflow-hidden mb-6">
+    <button class="accordion-header active w-full flex items-center justify-between p-5 text-right" data-target="acc-1" onclick="toggleAccordion(this)">
+      <span class="flex items-center gap-3">
+        <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 flex items-center justify-center text-white"><i class="fa-solid fa-clipboard-list"></i></span>
+        <span class="font-black text-base sm:text-lg text-slate-800">۱. کلیات، اپیدمیولوژی و ارزیابی اولیه زوج نابارور</span>
+      </span>
+      <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+    </button>
+    
+    <div id="acc-1" class="accordion-body px-5 pb-6 block">
+
+      <!-- Topic 1: Definitions -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-book"></i> تعاریف پایه</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری (Infertility):</strong> عدم وقوع بارداری پس از <strong>۱ تا ۲ سال</strong> نزدیکی منظم و بدون پیشگیری (بر اساس تعاریف مختلف).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><span class="badge bg-indigo-100 text-indigo-700">تعریف جدید ASRM</span> ناباروری یک بیماری، وضعیت یا حالتی است که با یکی از موارد زیر مشخص می‌شود:
+            <ul class="mt-1 mr-4 space-y-1 list-disc list-inside text-sm text-slate-600">
+              <li>ناتوانی در دستیابی به بارداری موفق بر اساس شرح حال، سن، یافته‌های فیزیکی و تست‌های تشخیصی.</li>
+              <li>نیاز به مداخله پزشکی (مانند استفاده از گامت یا جنین اهدایی) برای بارداری (فردی یا با پارتنر).</li>
+            </ul>
+          </span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری اولیه (Primary):</strong> عدم وجود سابقه هرگونه بارداری قبلی در زوجین.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری ثانویه (Secondary):</strong> وقوع یک بارداری در گذشته (حتی اگر به تولد زنده ختم نشده باشد).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">Fecundability:</strong> احتمال وقوع بارداری در هر سیکل منفرد، یا تعداد سیکل‌های لازم برای دستیابی به بارداری.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">Fecundity:</strong> احتمال دستیابی به <strong>تولد زنده</strong> (Live birth).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">Impaired fecundity (باروری مختل):</strong> بیشتر یا مساوی <strong>۳۶ ماه</strong> تلاش ناموفق برای بارداری، یا ناتوانی فیزیکی/دشواری در فرزندآوری.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span>در حالت طبیعی، <strong>~۹۰٪</strong> زوج‌ها ظرف ۱۲ ماه اول باردار می‌شوند. اصطلاح <strong>Subfertility</strong> غالباً به‌جای ناباروری به کار می‌رود.</span></li>
+        </ul>
+      </div>
+
+      <!-- Topic 2: Epidemiology -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-earth-asia"></i> اپیدمیولوژی و وضعیت جهانی</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span>ناباروری در سطح جهانی بر <strong>~۱۸۶ میلیون نفر</strong> تأثیر می‌گذارد و تا <strong>۱۵٪</strong> از زوج‌ها در سنین باروری را درگیر می‌کند.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span>تقاضا برای خدمات ART در ایالات متحده دو برابر شده است: از <strong>۱۵۰٬۰۰۰</strong> سیکل (۲۰۰۹) به بیش از <strong>۳۰۰٬۰۰۰</strong> سیکل (۲۰۱۹).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span>با این وجود، بهره‌مندی از خدمات ناباروری همچنان پایین است که علت عمده آن <strong>هزینه بالای خدمات</strong> و پوشش ناقص بیمه (نابرابری در دسترسی به دلیل عوامل اجتماعی و نژادی) است.</span></li>
+        </ul>
+      </div>
+
+      <!-- Topic 3: When to Start & Initial Assessment -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-stopwatch"></i> زمان شروع ارزیابی</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-center flex-wrap gap-1"><i class="fa-solid fa-circle text-[6px] text-indigo-400 shrink-0"></i><strong class="font-bold text-slate-900">سن زن &lt; ۳۵ سال</strong><i class="fas fa-arrow-left action-arrow bg-sky-100 text-sky-600 text-[10px] mx-1"></i>شروع ارزیابی پس از <strong>۱۲ ماه</strong> عدم موفقیت.</li>
+          <li class="flex items-center flex-wrap gap-1"><i class="fa-solid fa-circle text-[6px] text-indigo-400 shrink-0"></i><strong class="font-bold text-slate-900">سن زن &ge; ۳۵ سال</strong><i class="fas fa-arrow-left action-arrow bg-sky-100 text-sky-600 text-[10px] mx-1"></i>شروع ارزیابی پس از <strong>۶ ماه</strong> عدم موفقیت.</li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong>زنان بالای ۴۰ سال:</strong> نیازمند ارزیابی و درمان فوری‌تر هستند.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">موارد نیازمند ارزیابی و مداخله فوری (صرف‌نظر از زمان):</strong>
+            <ul class="mt-1 mr-4 space-y-1 list-disc list-inside text-sm text-slate-600">
+              <li>قاعدگی نامنظم (خونریزی بین قاعدگی، الیگومنوره، آمنوره)</li>
+              <li>بیماری‌های شناخته‌شده/مشکوک رحمی، لوله‌ای یا صفاقی (مثل اندومتریوز)</li>
+              <li>فاکتور مردانه شناخته‌شده یا مشکوک</li>
+              <li>اختلالات عملکرد جنسی</li>
+              <li>شرایط مستعدکننده کاهش ذخیره تخمدان (مثل درمان‌های سرطان و جهش‌های ژنتیکی)</li>
+            </ul>
+          </span></li>
+        </ul>
+      </div>
+
+      <!-- Topic 4: Clinical Evaluation -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-user-doctor"></i> ارزیابی اولیه و شرح حال بالینی (Initial Assessment)</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">اهمیت ویزیت اول:</strong> مهم‌ترین برخورد پزشک با زوج نابارور است، زیرا لحن و پایه ارزیابی‌ها و درمان‌های بعدی را مشخص می‌کند. ناباروری <strong>مشکل زوجین</strong> است و حضور شریک جنسی از ابتدای ارزیابی ضروری است.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">شرح حال زن:</strong> بررسی دقیق نظم سیکل‌های قاعدگی، دردهای لگنی، پیامدهای بارداری قبلی، سابقه PID یا جراحی‌های لگنی. سابقه تماس داخل رحمی با دی‌اتیل‌استیل‌بسترول (DES) (هرچند امروزه نادر است). بررسی علائم مرتبط با هیپوفیز، آدرنال و تیروئید (مثل گالاکتوره، هیرسوتیسم، تغییرات وزن).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">شرح حال مرد:</strong> نقایص تکاملی (بیضه‌های نزول‌نکرده)، سابقه جراحی تناسلی، عفونت‌ها (از جمله ارکیت اوریونی)، ترومای تناسلی قبلی، داروها و سوابق شغلی مؤثر بر عملکرد تولیدمثل. بررسی فرکانس مقاربت، دیس‌پارونی و اختلالات جنسی.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">معاینه فیزیکی:</strong> در زنان شامل قد، وزن، Body habitus، توزیع موها، معاینه تیروئید و لگن. در مردان، در صورت وجود اختلال در شرح حال یا ارزیابی‌های اولیه، ارجاع به <strong class="font-bold text-slate-900">اورولوژیست</strong> توصیه می‌شود.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">حمایت روانی:</strong> ویزیت اولیه فرصتی برای ارزیابی تأثیر عاطفی ناباروری بر زوجین است. ارجاع به مددکار اجتماعی یا روانشناس آموزش‌دیده بسیار مفید است.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">۳ بررسی پایه‌ پیش از شروع هر درمان:</strong>
+            <span class="inline-flex items-center gap-1 bg-slate-100 px-2 py-0.5 rounded text-sm font-bold mx-1 text-slate-800">۱. آنالیز اسپرم</span>
+            <span class="inline-flex items-center gap-1 bg-slate-100 px-2 py-0.5 rounded text-sm font-bold mx-1 text-slate-800">۲. تأیید تخمک‌گذاری</span>
+            <span class="inline-flex items-center gap-1 bg-slate-100 px-2 py-0.5 rounded text-sm font-bold mx-1 text-slate-800">۳. اثبات باز بودن لوله‌ها</span>
+            (معمولاً غربالگری ذخیره تخمدانی نیز انجام می‌شود).
+          </span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">بیماری‌های سیستمیک شدید:</strong> در بیماران مبتلا به نارسایی کلیه، نارسایی کبد یا سرطان که قصد بارداری دارند، مشاوره و ارزیابی دقیق پیش از بارداری (Preconception) الزامی است، زیرا خطرات درمان‌های باروری و خود بارداری می‌تواند چشمگیر باشد.</span></li>
+        </ul>
+      </div>
+
+      <!-- Topic 5: Causes of Infertility -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-chart-pie"></i> علل ناباروری (جدول ۳۶-۱)</p>
+        <div class="overflow-x-auto rounded-xl border border-slate-200 mb-3">
+          <table class="gv-table w-full text-sm whitespace-nowrap">
+            <thead class="bg-indigo-50 text-indigo-700 font-black">
+              <tr>
+                <th class="w-1/2">علت / فاکتور</th>
+                <th class="w-1/2">شیوع نسبی (درصد)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="font-bold">فاکتور مردانه به‌تنهایی</td><td>۱۷ – ۲۸٪</td></tr>
+              <tr><td class="font-bold">فاکتور مردانه و زنانه همزمان</td><td>۸ – ۳۹٪</td></tr>
+              <tr><td class="font-bold">فاکتور زنانه به‌تنهایی</td><td>۳۳ – ۴۰٪</td></tr>
+              <tr><td class="font-bold">ناباروری بدون علت مشخص (Unexplained)</td><td>۸ – ۲۸٪</td></tr>
+              <tr class="bg-slate-50"><td colspan="2" class="font-black text-center text-slate-500">تفکیک علل فاکتور زنانه</td></tr>
+              <tr><td class="font-bold">اختلال تخمک‌گذاری</td><td>۲۱ – ۳۶٪</td></tr>
+              <tr><td class="font-bold">فاکتور لوله‌ای یا صفاقی</td><td>۱۶ – ۲۸٪</td></tr>
+              <tr><td class="font-bold">سایر علل متفرقه (رحمی، سرویکال و ...)</td><td>۹ – ۱۲٪</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed mt-4">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">فاکتور مردانه:</strong> در ۲۰٪ موارد تنها علت است، اما در <strong>بیش از ۵۰٪ موارد</strong> به‌عنوان یک فاکتور کمک‌کننده (Contributing factor) حضور دارد.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">ناباروری مطلق (Absolute Infertility):</strong> بسیار نادر است و ناشی از فقدان مادرزادی یا اکتسابی برگشت‌ناپذیر گامت‌های عملکردی یا عدم وجود ساختارهای تولیدمثلی در یکی از زوجین است.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">کاهش شانس بارداری خودبه‌خودی:</strong> در زنان با <strong>سن >۴۲ سال</strong>، طول مدت ناباروری <strong>>۴ سال</strong>، اندومتریوز شدید، یا بیماری‌های لوله‌ای شدید، احتمال بارداری خودبه‌خودی بسیار ضعیف است و باید مستقیماً برای شروع درمان تشویق شوند (پرهیز از Expectant management).</span></li>
+        </ul>
+      </div>
+
+      <!-- Topic 6: Lifestyle -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-apple-whole"></i> تأثیر سبک زندگی بر باروری</p>
+        <ul class="space-y-3 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-utensils text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">رژیم غذایی پیش از بارداری:</strong><br>
+              در زنان: مصرف میوه، سبزیجات، غلات کامل، اسیدهای چرب امگا-۳ و کاهش چربی‌های اشباع (و فست‌فود) باروری را بهبود می‌بخشد.<br>
+              در مردان: رژیم غنی از میوه، سبزیجات، ماهی و محدود در گوشت (بویژه فرآوری‌شده)، چربی و سویا باعث بهبود پارامترهای اسپرم (تحرک و غلظت) می‌شود.
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-pills text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">ویتامین‌ها و ریزمغذی‌ها:</strong><br>
+              همه زنانِ در حال اقدام، باید ویتامین پره‌ناتال حاوی <strong>۴۰۰ تا ۸۰۰ میکروگرم اسید فولیک</strong> مصرف کنند (جهت پیشگیری از نقص لوله عصبی).<br>
+              در مردان، داده‌ها در مورد مکمل‌ها متناقض است؛ کارنیتین و سلنیوم فایده مشخصی ندارند، اما شواهدی دال بر اثربخشی <strong>کوآنزیم Q10</strong> در بهبود پارامترهای اسپرم وجود دارد.
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-weight-scale text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">شاخص توده بدنی (BMI):</strong><br>
+              <strong class="text-slate-800">چاقی در زنان:</strong> چاقی کلاس II (BMI ۳۵-۴۰) زمان رسیدن به بارداری را طولانی کرده و نرخ موفقیت IVF را کاهش می‌دهد. چاقی شکمی خطر عدم تخمک‌گذاری را بالا می‌برد. کاهش وزن <strong>حدود ۲۰ پوند (۹ کیلوگرم)</strong> در زنان دارای چاقی کلاس I (BMI ۳۰-۳۴.۹) شانس تولد زنده خودبه‌خودی را به‌طور معناداری بهبود می‌بخشد.<br>
+              <strong class="text-slate-800">کم‌وزنی:</strong> BMI مساوی یا کمتر از ۱۸.۵ نیز باروری را کاهش می‌دهد. هدف بهینه، رسیدن به BMI نرمال (۱۸.۵ تا ۲۵) است.<br>
+              <strong class="text-slate-800">چاقی در مردان:</strong> شانس ناباروری را بالا برده، باعث اختلال پارامترهای اسپرم، آسیب DNA و آسیب میتوکندریایی و ترشح کمتر گنادوتروپین‌ها می‌شود.
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-smoking text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">مصرف دخانیات (سیگار):</strong><br>
+              استعمال سیگار توسط هر یک از زوجین، باعث کاهش نرخ تولد زنده، کاهش موفقیت IUI، و افزایش نرخ لغو سیکل‌های IVF (حتی در ترک‌کنندگان اخیر) می‌شود. در زنان خطر سقط و تسریع تخلیه فولیکولی (یائسگی زودتر) را به‌همراه دارد. در مردان، سیگار و تنباکوی جویدنی باعث کاهش تراکم و تحرک اسپرم می‌گردد.
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-wine-glass text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">مصرف الکل:</strong><br>
+              مصرف سنگین (>۲ نوشیدنی در روز) در حین اقدام به بارداری باید متوقف شود. در مردان الکلیسم (بویژه با بیماری کبدی) بر پارامترهای اسپرم اثر منفی می‌گذارد.
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-mug-hot text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">مصرف کافئین:</strong><br>
+              مقادیر بالای کافئین (حدود ۵۰۰ میلی‌گرم) به باروری زنان آسیب می‌زند. توصیه می‌شود مصرف کافئین به <strong>کمتر از ۲۰۰ الی ۳۰۰ میلی‌گرم</strong> در روز محدود شود.
+            </div>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fa-solid fa-cannabis text-indigo-400 mt-1 shrink-0"></i>
+            <div>
+              <strong class="font-bold text-slate-900">سایر موارد (ماری‌جوانا و کوکائین):</strong><br>
+              برخی مطالعات ارتباط ماری‌جوانا با اختلال پارامترهای اسپرم را نشان داده‌اند (تأییدشده در مدل‌های حیوانی). زنان مصرف‌کننده نیز شیوع کمی بالاتری از ناباروری دارند. مصرف کوکائین همزمان باعث افت کمیت و تحرک اسپرم می‌شود. <strong>توصیه قطعی: اجتناب از ماری‌جوانا و مواد مخدر.</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- QUIZ SECTION -->
+      <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+        <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+        <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+          <p class="font-bold text-slate-800 mb-2">سوال ۱ &middot; زمان‌بندی صحیح شروع ارزیابی ناباروری</p>
+          <p class="text-slate-700 text-sm mb-3">خانم ۳۶ ساله با قاعدگی منظم و همسر سالم، پس از ۵ ماه نزدیکی منظم بدون پیشگیری هنوز باردار نشده است. اقدام صحیح کدام است؟</p>
+          <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q1-answer">
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">الف) تا تکمیل ۱۲ ماه تلاش، ارزیابی را به تعویق بیندازید.</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, true)">ب) ارزیابی پایه ناباروری باید بلافاصله پس از تکمیل ۶ ماه آغاز شود.</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">ج) بیمار باید مستقیماً بدون ارزیابی به درمان IVF ارجاع داده شود.</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">د) تنها بررسی هورمونی زن کافیست و نیازی به ارزیابی مرد نیست.</button>
+          </div>
+          <div id="q1-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+            <p class="font-black mb-1">پاسخ صحیح: گزینه ب</p>
+            <p>طبق گایدلاین ASRM، در زنان &ge;۳۵ سال، ارزیابی ناباروری باید پس از ۶ ماه (نه ۱۲ ماه) تلاش ناموفق آغاز شود. از آنجایی که بیمار تاکنون ۵ ماه تلاش کرده است، به‌زودی نیازمند شروع سه تست پایه‌ای (آنالیز اسپرم، تأیید تخمک‌گذاری، باز بودن لوله‌ها) است. ارزیابی مرد به‌اندازه زن اهمیت دارد.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-earth-asia"></i> اپیدمیولوژی</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>شیوع جهانی ناباروری حدود <strong>۱۸۶ میلیون نفر</strong> است و تا <strong>۱۵٪</strong> زوج‌ها در سنین باروری را تحت تأثیر قرار می‌دهد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>در آمریکا، چرخه‌های ART از حدود <strong>۱۵۰٬۰۰۰</strong> در ۲۰۰۹ به بیش از <strong>۳۰۰٬۰۰۰</strong> در ۲۰۱۹ افزایش یافته است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>موانع دسترسی شامل هزینه بالا، پوشش ناکافی بیمه، نابرابری‌های اجتماعی و تفاوت‌های نژادی در نتیجه ART است.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-stopwatch"></i> چه زمانی ارزیابی را شروع کنیم</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>زن <strong>&lt; ۳۵ سال</strong>: ارزیابی پس از <strong>۱۲ ماه</strong> تلاش بدون بارداری.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>زن <strong>≥ ۳۵ سال</strong>: ارزیابی پس از <strong>۶ ماه</strong> تلاش.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>زن <strong>&gt; ۴۰ سال</strong> یا زوج‌هایی با عوامل شناخته‌شده باید سریع‌تر و بدون تأخیر ارزیابی شوند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>شروع فوری ارزیابی در مواردی که سابقه قاعدگی نامنظم، بیماری‌های لوله‌ای/رحمی، فاکتور مردانه، یا عوامل کاهش ذخیره تخمدانی وجود دارد.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-user-doctor"></i> ارزیابی اولیه زوج نابارور</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>ارزیابی باید زوجی باشد و حضور هر دو همسر در جلسات اولیه، مشارکت و حمایت عاطفی را تقویت می‌کند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>تاریخچه مفصل شامل قاعدگی، درد لگن، حاملگی‌های قبلی، جراحی‌ها، PID، دی‌اتیل استیل‌بستول در مادر و فاکتورهای محیطی است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>بررسی سیستم‌های آدرنال، تیروئید، هیپوفیز؛ علایم گالاکتوره، هیرسوتیسم، تغییر وزن؛ سابقه عفونت‌ها، تروما و داروهای مضر.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>از مردان تاریخچه جنسی، عملکرد انزال، کشیدگی بیضه، موقیت کاری و تماس با سموم را بپرسید. معاینه مرد و مشاوره با اورولوژیست در صورت نیاز مفید است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>در زنان توجه ویژه به قد، وزن، توزیع چربی، غده تیروئید و معاینه لگنی دارد. بررسی روانشناسی و پشتیبانی اجتماعی اغلب ضروری است.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-heart-pulse"></i> علل اصلی ناباروری</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">فاکتور مردانه:</strong> حدود ۲۰٪ به عنوان علت اصلی و تا ۵۰٪ به صورت ترکیبی.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کاهش ذخیره تخمدانی:</strong> با افزایش سن و به دلیل شیمی‌درمانی یا عوامل دیگر رخ می‌دهد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">فاکتور تخمک‌گذاری:</strong> تا ۳۰–۴۰٪ ناباروری زنان، که اکثراً با PCOS همراه است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">فاکتور لوله‌ای/پریتوانی:</strong> حدود ۲۵–۳۵٪ ناباروری زنان.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">فاکتور رحم و لگن:</strong> شامل ناهنجاری‌های مادرزادی، پولیپ‌ها، فیبروم‌ها و اندومتریوز.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">بدون علت مشخص:</strong> پس از ارزیابی کامل، حدود ۸–۲۸٪ موارد.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-apple-whole"></i> تأثیر سبک زندگی</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">رژیم غذایی:</strong> مصرف میوه، سبزیجات، غلات کامل، امگا-۳ و کاهش چربی اشباع برای بهبود باروری زنان و مردان توصیه می‌شود.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اسید فولیک:</strong> ۴۰۰–۸۰۰ میکروگرم روزانه قبل از بارداری برای پیشگیری از نقایص لوله عصبی لازم است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">وزن مناسب:</strong> BMI ۱۸.۵–۲۵ برای باروری ایده‌آل است؛ چاقی و کم‌وزنی هر دو می‌توانند باروری را کاهش دهند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سیگار:</strong> برای هر دو شریک بارداری زنده را کاهش می‌دهد و خطر لغو سیکل IVF را افزایش می‌دهد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">الکل:</strong> از مصرف سنگین (>۲ نوشیدنی در روز) در هنگام تلاش برای بارداری خودداری شود.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کافئین:</strong> بهتر است کمتر از ۲۰۰–۳۰۰ میلی‌گرم در روز مصرف شود.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">مواد مخدر:</strong> مصرف ماری‌جوانا و سایر مخدرها به دلیل شواهد محدود باید اجتناب شود.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-mars"></i> فاکتور مردانه</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>آنالیز اسپرم پایه شامل حجم، غلظت، تحرک و مورفولوژی است و حداقل <strong>دو نمونه</strong> توصیه می‌شود.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>عوامل قابل اصلاح شامل واریکوسل، مصرف سیگار، داروهای سرکوب‌کننده، عفونت‌های منتقل‌شونده جنسی و اختلالات هورمونی هستند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">IUI:</strong> تکنیک پرکاربردی برای ناباروری با عامل مردانه یا بدون علت مشخص است و نیاز به شمارش متحرک کامل کافی دارد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ICSI:</strong> اجازه بارداری در موارد اسپرم ضعیف، آزواسپرمی، یا با اسپرم استخراج‌شده جراحی را می‌دهد.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-calendar-days"></i> سن زن و ذخیره تخمدانی</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>باروری زن از اوایل دهه ۳۰ کاهش می‌یابد و پس از اواخر دهه ۳۰ و اوایل دهه ۴۰ سریع‌تر افت می‌کند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">آزمون‌های ذخیره تخمدانی:</strong> FSH پایه، AMH، AFC و در موارد لازم تست‌های دیگری مانند CCCT.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">کاهش ذخیره تخمدانی:</strong> درمان شامل IVF خودی، استفاده از تخمک اهدایی، یا مشاوره برای گزینه‌های دیگر است.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-egg"></i> اختلالات تخمک‌گذاری و PCOS</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>اختلالات تخمک‌گذاری حدود ۳۰–۴۰٪ ناباروری زنان را شامل می‌شوند و شایع‌ترین علت آن PCOS است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>تشخیص مبتنی بر سابقه قاعدگی، سونوگرافی فولیکولی و ارزیابی هورمونی است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>درمان اولیه شامل اصلاح سبک زندگی، کاهش وزن و در صورت نیاز داروهای تحریک تخمک‌گذاری یا گنادوتروپین‌ها است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>در اختلالات تخمک‌گذاری ناشی از کم‌وزنی یا فشار، تغذیه مناسب و درمان علت زمینه‌ای باید اولویت داشته باشد.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-hospital"></i> فاکتور لوله‌ای و رحم</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>فاکتور لوله‌ای نزدیک به ۲۵–۳۵٪ ناباروری زنان است. شایع‌ترین علت آن PID و عفونت‌های ساب‌کلینیکال مانند کلامیدیا است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>روش‌های تشخیصی شامل HSG، سونوگرافی هیستروسالپینگوگرافی و لاپاراسکوپی است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>درمان ممکن است شامل جراحی ترمیمی، حذف هیدروسالپنکس قبل از IVF یا استفاده از IVF مستقیم باشد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>عوامل رحمی شامل ناهنجاری‌های مادرزادی، پولیپ‌ها و اندومتریوز است. فیبروم‌هایی که محیط رحمی را تغییر نمی‌دهند معمولاً سبب ناباروری مستقیم نیستند.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-question"></i> ناباروری بدون علت مشخص</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>پس از اسکن کامل، حدود ۸–۲۸٪ زوج‌ها به تشخیص ناباروری بدون علت می‌رسند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>درمان شامل درمان‌های محرک تخمک‌گذاری با IUI یا سپس ART مانند IVF است، با آگاهی از پاسخ کمتر موفق در IUI نسبت به ART.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-syringe"></i> فناوری‌های کمک باروری</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">ART:</strong> شامل IVF، ICSI، انتقال گامت داخل لوله‌ای (GIFT)، انتقال زیگوت داخل لوله‌ای (ZIFT)، و فریز جنین یا تخمک است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>ICSI امکان باروری را در موارد عوامل مردانه شدید یا اسپرم جراحی فراهم می‌کند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">PGT-A:</strong> امکان بررسی آنیوپلوئیدی جنین را قبل از انتقال فراهم می‌کند و می‌تواند در موارد تکراری سقط یا سن بالای مادر مفید باشد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">حفظ باروری:</strong> برای بیماران سرطانی، کریوبانک تخمک یا جنین و ذخیره بافت تخمدان گزینه‌های مهمی هستند.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-triangle-exclamation"></i> عوارض و پیامدهای درمان</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>دو یا چند قلوزایی مهم‌ترین عارضه ART است و با خطرات پزشکی، روانی و اجتماعی قابل توجهی همراه است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">OHSS:</strong> عارضه‌ییاتروژنیک است که با تحریک بیش از حد تخمدان‌ها، تجمع مایع و تغییرات همودینامیک همراه می‌شود.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>باروری با ICSI یا IVF ممکن است خطر حاملگی خارج‌رحمی و هتروتوپیک را افزایش دهد، اما با پایش دقیق قابل مدیریت است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>شواهد کنونی افزایش خطر قطعی سرطان تهاجمی تخمدان، رحم یا پستان ناشی از داروهای باروری را تأیید نمی‌کنند، اگرچه پیگیری طولانی‌مدت ادامه دارد.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>استرس شایع است و یکی از مهم‌ترین دلایل قطع درمان است. درمان اختلالات روانی باید مستقل از نتیجه ART در نظر گرفته شود.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-globe"></i> دسترسی و عدالت در درمان ناباروری</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>ART به دلیل هزینه، پوشش بیمه‌ای ناکافی و محدودیت‌های زیرساختی هنوز در بسیاری از کشورها و گروه‌های اجتماعی محدود است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>نابرابری نژادی در نتایج ART دیده می‌شود و زنان سیاه‌پوست و لاتین در آمریکا نرخ موفقیت پایین‌تری دارند.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>گستره کاربرد ART شامل زوج‌های همجنس، افراد تنها، حفظ باروری برای بیماران سرطانی و پیشگیری از بیماری‌های ژنتیکی نیز می‌شود.</span></li>
-      </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-      <p class="sub-h"><i class="fa-solid fa-lightbulb"></i> نکات کلیدی</p>
-      <ul class="space-y-2 text-slate-700 text-[15px]">
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>ارزیابی اولیه باید جامع و زوج‌محور باشد؛ سه بررسی پایه شامل آنالیز اسپرم، تأیید تخمک‌گذاری و اسناد باز بودن لوله‌ها است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>تأثیر سن زن بر باروری بسیار قوی است و کاهش ذخیره تخمدانی قبل از ۴۰ سالگی معمولاً قابل توجه است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>سبک زندگی، وزن، سیگار، الکل و کافئین می‌توانند باروری را تحت تأثیر قرار دهند و اصلاح آنها بخشی از مراقبت استاندارد است.</span></li>
-        <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-indigo-400 mt-2 shrink-0"></i><span>ART امروز شامل IVF، ICSI، فریز تخمک/جنین و استفاده از گامت یا رحم ثالث است و باید با آگاهی کامل از خطرات و نتایج انجام شود.</span></li>
-      </ul>
-    </div>
-
   </div>
 </div>
+
+<script>
+  function toggleAccordion(button) {
+    const targetId = button.getAttribute('data-target');
+    const content = document.getElementById(targetId);
+    button.classList.toggle('active');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.classList.add('block');
+    } else {
+      content.classList.remove('block');
+      content.classList.add('hidden');
+    }
+  }
+
+  function checkAnswer(button, isCorrect) {
+    const parent = button.closest('.quiz-options');
+    if(parent.getAttribute('data-answered') === 'true') return;
+    
+    const targetId = parent.getAttribute('data-target');
+    const answerBox = document.getElementById(targetId);
+    const options = parent.querySelectorAll('.quiz-option');
+    
+    options.forEach(opt => {
+      opt.classList.remove('hover:bg-slate-100', 'border-slate-300');
+      opt.disabled = true;
+      if(opt.onclick.toString().includes('true')) {
+        opt.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-800', 'font-bold');
+      } else {
+        opt.classList.add('opacity-50', 'bg-slate-50');
+      }
+    });
+
+    if(!isCorrect) {
+      button.classList.remove('opacity-50', 'bg-slate-50');
+      button.classList.add('bg-red-100', 'border-red-500', 'text-red-800');
+    }
+
+    parent.setAttribute('data-answered', 'true');
+    answerBox.classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
