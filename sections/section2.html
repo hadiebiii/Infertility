@@ -1,136 +1,251 @@
-<div class="glass-card rounded-2xl overflow-hidden">
-  <button class="accordion-header w-full flex items-center justify-between p-5 text-right" data-target="acc-2">
-    <span class="flex items-center gap-3">
-      <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center text-white"><i class="fa-solid fa-mars"></i></span>
-      <span class="font-black text-base sm:text-lg text-slate-800">۲. فاکتور مردانه (آندرولوژی بالینی)</span>
-    </span>
-    <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
-  </button>
-  <div id="acc-2" class="accordion-body hidden px-5 pb-6">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بخش دوم: فاکتور مردانه (آندرولوژی بالینی)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- MathJax for rendering LaTeX -->
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700;900&display=swap');
+    body { font-family: 'Vazirmatn', sans-serif; background-color: #f8fafc; padding: 1rem; }
+    .glass-card { background: rgba(255, 255, 255, 0.95); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; }
+    .accordion-header { transition: background-color 0.3s; cursor: pointer; }
+    .accordion-header:hover { background-color: #f1f5f9; }
+    .accordion-icon { transition: transform 0.3s; }
+    .accordion-header.active .accordion-icon { transform: rotate(180deg); }
+    .sub-h { font-size: 1.125rem; font-weight: 800; color: #0d9488; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .badge { padding: 0.15rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
+    .gv-table th, .gv-table td { padding: 0.75rem; text-align: right; border-bottom: 1px solid #e2e8f0; }
+    .action-arrow { padding: 0.2rem; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; }
+    .redflag-box { background: #fef2f2; border: 1px solid #fecaca; }
+  </style>
+</head>
+<body>
 
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-dna"></i> فیزیولوژی اسپرماتوژنز</p>
-    <ul class="space-y-2 text-slate-700 text-[15px]">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سلول لایدیگ:</strong> سنتز آندروژن &middot; <strong class="font-bold text-slate-900">سلول سرتولی:</strong> پوشش لوله سمینیفروس، محل اسپرماتوژنز.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong>LH</strong><i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>سنتز تستوسترون (لایدیگ) &middot; <strong>FSH + تستوسترون</strong><i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>تحریک اسپرماتوژنز (سرتولی).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>کوهورت جدید اسپرماتوگونی: هر <strong>۱۶ روز</strong> &middot; کل اسپرماتوژنز: <strong>~۷۵ روز</strong>.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>بلوغ نهایی + کاپاسیتاسیون در اپیدیدیم: <strong>۲–۶ روز</strong> — پس اسپرم TESE/PESA فاقد کاپاسیتاسیون کامل.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>کاپاسیتاسیون واقعی: موکوس سرویکس (حذف کلسترول، فسفریلاسیون تیروزین، ورود کلسیم) &middot; واکنش آکروزوم: پس از عبور از کومولوس.</span></li>
-    </ul>
-    </div>
+<div class="max-w-4xl mx-auto">
+  <!-- Section 2 Content -->
+  <div class="glass-card rounded-2xl overflow-hidden mb-6">
+    <button class="accordion-header active w-full flex items-center justify-between p-5 text-right" data-target="acc-2" onclick="toggleAccordion(this)">
+      <span class="flex items-center gap-3">
+        <span class="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-600 flex items-center justify-center text-white"><i class="fa-solid fa-mars"></i></span>
+        <span class="font-black text-base sm:text-lg text-slate-800">۲. فاکتور مردانه (آندرولوژی بالینی)</span>
+      </span>
+      <i class="fa-solid fa-chevron-down accordion-icon text-slate-400"></i>
+    </button>
+    
+    <div id="acc-2" class="accordion-body px-5 pb-6 block">
 
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-vial-circle-check"></i> آنالیز اسپرم (Semen Analysis)</p>
-    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>هیچ پارامتر منفرد تشخیصی نیست؛ افزایش تعداد پارامترهای غیرطبیعی <i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i> احتمال ناباروری بالاتر.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>حداقل <strong>۲ آنالیز اسپرم</strong> (تغییرپذیری بین انزال‌ها)، به‌خصوص در غیرطبیعی بودن.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اصطلاحات:</strong> نورموزواسپرمی &middot; الیگوزواسپرمی (کاهش تعداد) &middot; آستنوزواسپرمی (کاهش تحرک) &middot; تراتوزواسپرمی (فرم غیرطبیعی) &middot; آزواسپرمی (فقدان اسپرم) &middot; آسپرمی (فقدان مایع منی) &middot; لکوسیتواسپرمی &middot; نکروزواسپرمی.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>پرهیز از انزال پیش از آنالیز: <strong>۲–۷ روز</strong> &middot; برای IUI: &le;۲ روز (بهبود نرخ بارداری).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>انتقال نمونه به آزمایشگاه: &le;۳۰ دقیقه (حداکثر ۵۰) &middot; بررسی ظرف ۱ ساعت &middot; دما ۲۰–۳۷°C.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>حجم مایع منی &lt;۱ mL<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>بررسی انزال رتروگراد (ادرار پس از انزال) &middot; &gt;۵ mL<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>التهاب غدد کمکی.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">معیار Kruger/Tygerberg:</strong> مورفولوژی طبیعی &lt;۹٪ — پیش‌بینی‌کننده قوی‌تر از تعداد/تحرک.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>پاتوژن‌های شایع باکتریواسپرمی: Chlamydia trachomatis، Ureaplasma urealyticum، Mycoplasma hominis.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">TUNEL</strong> (فراگمانتاسیون DNA اسپرم): بهترین همبستگی با پیامد بارداری.</span></li>
-    </ul>
+      <!-- کلیات و سبک زندگی -->
+      <div class="searchable-item mb-6 mt-2">
+        <p class="sub-h"><i class="fa-solid fa-chart-line"></i> اپیدمیولوژی و تأثیر سبک زندگی بر مردان</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">شیوع:</strong> فاکتور مردانه تنها علت در $\sim 20\%$ موارد است، اما به عنوان یک عامل کمک‌کننده (Contributing) در $\sim 50\%$ موارد ناباروری زوجین نقش دارد. (همچنین شامل زوج‌های همجنسگرای زن که نیاز به اسپرم اهدایی دارند می‌شود).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">کاهش جهانی کیفیت اسپرم:</strong> مطالعات (مانند متاآنالیز Levine در ۲۰۱۷) نشان‌دهنده کاهش بیش از $50\%$ در غلظت و تعداد کل اسپرم بین سال‌های ۱۹۷۱ تا ۲۰۱۱ در کشورهای غربی است.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">چاقی:</strong> چاقی مردان با پارامترهای غیرطبیعی اسپرم، آسیب DNA و میتوکندری، و ترشح کمتر گنادوتروپین‌ها مرتبط است.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">مواد مخدر و الکل:</strong> تنباکو (دودکردنی یا جویدنی) باعث کاهش تراکم و تحرک می‌شود. مصرف شدید الکل (بویژه همراه با بیماری کبدی) پارامترها را مختل می‌کند. مصرف ماری‌جوانا و کوکائین بر اساس مدل‌های حیوانی اثرات منفی قطعی بر کمیت و تحرک اسپرم دارند.</span></li>
+        </ul>
+      </div>
 
-    <div class="redflag-box searchable-item rounded-xl p-4">
-      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جمع‌آوری نمونه</p>
-      <p class="text-sm text-red-900"><strong>کاندوم لاتکس معمولی:</strong> سمی برای اسپرم — ممنوع مطلق. فقط کاندوم مخصوص آنالیز اسپرم مجاز. لوبریکنت‌های Astroglide، KY Jelly، بزاق، روغن زیتون: مهار تحرک اسپرم.</p>
-    </div>
-    </div>
+      <!-- Physiology -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-dna"></i> فیزیولوژی تولید و انتقال اسپرم</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">سلول لایدیگ (Leydig):</strong> تحت تأثیر <strong class="text-slate-900">LH</strong> هیپوفیز، تستوسترون می‌سازد.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">سلول سرتولی (Sertoli):</strong> تحت تأثیر <strong class="text-slate-900">FSH و تستوسترون</strong>، اسپرماتوژنز را در لوله‌های سمینیفروس هدایت می‌کند. اسپرماتوسیت‌های دیپلوئید ($46$) میوز کرده و به اسپرماتیدهای هاپلوئید ($23$ کروموزوم) تبدیل می‌شوند.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">زمان‌بندی:</strong> کوهورت جدید اسپرماتوگونی هر $16 \text{ days}$ وارد چرخه می‌شود. کل فرآیند اسپرماتوژنز حدود $75 \text{ days}$ طول می‌کشد.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">اپیدیدیم:</strong> عبور اسپرم از این لوله پیچ‌درپیچ $2 \text{ تا } 6 \text{ days}$ زمان می‌برد و طی آن بلوغ نهایی و تحرک پیش‌رونده کسب می‌شود.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">انزال و Liquefaction:</strong> مایع منی در ابتدا ژلاتینی است و $20 \text{ تا } 30 \text{ minutes}$ پس از انزال، توسط آنزیم‌های پروتئولیتیک پروستات مایع (Liquefied) می‌شود.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">کاپاسیتاسیون (Capacitation):</strong> در موکوس سرویکس رخ می‌دهد (حذف کلسترول، فسفریلاسیون تیروزین، ورود کلسیم) تا اسپرم توانایی باروری کسب کند.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">واکنش‌ها در محل لقاح:</strong> عبور از سلول‌های کومولوس <i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i> <strong class="text-slate-900">واکنش آکروزومی</strong> (آزادسازی آنزیم‌های هیدرولیتیک). پس از نفوذ اولین اسپرم به اووسیت <i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i> <strong class="text-slate-900">واکنش کورتیکال</strong> (آزادسازی گرانول‌ها برای جلوگیری از پلی‌اسپرمی).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">سرعت انتقال:</strong> در فاز فولیکولار، اسپرم‌ها ظرف تنها $2 \text{ minutes}$ از فورنیکس خلفی واژن به لوله‌های فالوپ می‌رسند!</span></li>
+        </ul>
+      </div>
 
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-pump-medical"></i> داروها و اسپرماتوژنز</p>
-    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">مضر اسپرماتوژنز:</strong> سولفاسالازین، متوترکسات، نیتروفورانتوئین، کلشی‌سین، شیمی‌درمانی.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">سرکوب هیپوفیز:</strong> تستوسترون اگزوژن، آنالوگ‌های GnRH &middot; <strong class="font-bold text-slate-900">آنتی‌آندروژنیک:</strong> سایمتیدین، اسپیرونولاکتون.</span></li>
-    </ul>
-    <div class="redflag-box searchable-item rounded-xl p-4">
-      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز تستوسترون‌درمانی</p>
-      <p class="text-sm text-red-900">تستوسترون اگزوژن در ساب‌فرتیلیتی مردانه (غیرآزواسپرمی): ممنوع مطلق — بازخورد منفی هیپوفیزی، کاهش تستوسترون داخل‌بیضه‌ای و اسپرماتوژنز.</p>
-    </div>
-    </div>
-
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-water"></i> واریکوسل</p>
-    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>واریکوسل قابل‌لمس: <strong>۱۳.۵٪</strong> مردان اخیراً پدرشده &middot; <strong>۳۱٪</strong> الیگوزواسپرمی ایدیوپاتیک.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>پس از ترمیم واریکوسل: تأخیر شروع ART &ge;<strong>۶ ماه</strong>.</span></li>
-    </ul>
-    <div class="redflag-box searchable-item rounded-xl p-4">
-      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جراحی واریکوسل</p>
-      <p class="text-sm text-red-900">جراحی واریکوسل در آزواسپرمی غیرانسدادی (نارسایی بیضه): ممنوع مطلق.</p>
-    </div>
-    </div>
-
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-syringe"></i> IUI و اسپرم اهدایی</p>
-    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>IUI: <strong>۰.۳–۰.۵ mL</strong> اسپرم شسته‌شده در حفره داخل رحمی.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>TMSC (شمارش اسپرم متحرک کل) &ge;<strong>۹ میلیون</strong><i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>بهترین نرخ بارداری (<strong>۱۶.۷٪</strong>/سیکل).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>&ge;۲ فولیکول &ge;۱۵ mm<i class="fas fa-arrow-left action-arrow bg-emerald-100 text-emerald-600 text-[10px] mx-1"></i>نرخ زایمان ~دو برابر تک‌فولیکول (<strong>۱۷٪ در برابر ۸٪</strong>).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>زمان IUI: <strong>۲۴–۳۶ ساعت</strong> پس از تریگر hCG یا <strong>۲۴ ساعت</strong> پس از سرج خودبه‌خودی LH.</span></li>
-    </ul>
-    <div class="redflag-box searchable-item rounded-xl p-4">
-      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز اسپرم اهدایی</p>
-      <p class="text-sm text-red-900"><strong>اسپرم اهدایی تازه:</strong> ممنوع مطلق (CDC/ASRM) — خطر انتقال HIV. فقط نمونه منجمد و قرنطینه &ge;۶ ماه با بازآزمایش اهداکننده مجاز. اهداکننده با سابقه خانوادگی اختلال غالب/وابسته به X: مستثنا مطلق.</p>
-    </div>
-    </div>
-
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-microscope"></i> ICSI</p>
-    <ul class="space-y-2 text-slate-700 text-[15px]">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>تزریق مستقیم یک اسپرم زنده به تخمک — دور زدن محدودیت تحرک، کاپاسیتاسیون، اتصال به زونا.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">اندیکاسیون اصلی:</strong> فاکتور مردانه شدید &middot; تخمک منجمد قبلی &middot; اسپرم جراحی (TESE/TESA/PESA/MESA).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>اندیکاسیون غیرمردانه (تراتوزواسپرمی خفیف، ناباروری بدون علت، سن مادری بالا): بدون شواهد قوی برتری بر IVF متعارف.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>دژنراسیون تخمک پس از ICSI: <strong>۵–۱۹٪</strong>.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>میکرودیلیشن Y، کاریوتایپ غیرطبیعی، جهش CF<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>مشاوره ژنتیک الزامی پیش از ICSI.</span></li>
-    </ul>
-    </div>
-
-    <div class="searchable-item mb-5">
-    <p class="sub-h"><i class="fa-solid fa-flask-vial"></i> آزواسپرمی: طبقه‌بندی و درمان</p>
-    <ul class="space-y-2 text-slate-700 text-[15px] mb-3">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>شیوع: <strong>۱٪</strong> کل مردان &middot; <strong>۱۰–۱۵٪</strong> مردان نابارور.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong class="font-bold text-slate-900">طبقه‌بندی:</strong> پیش‌بیضه‌ای (هیپوگنادوتروپیک، قابل‌درمان هورمونی) &middot; بیضه‌ای (هیپرگنادوتروپیک، نارسایی گنادی) &middot; پس‌بیضه‌ای (انسدادی).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>غیرانسدادی: کاریوتایپ (شایع‌ترین: کلاین‌فلتر) + میکرودیلیشن Y الزامی &middot; انسدادی: تست ژنتیکی CFTR الزامی.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span><strong>CBAVD</strong> (فقدان مادرزادی دوطرفه وازدفران): جهش CFTR در ~دو سوم مردان — آزمایش ناقل‌بودن شریک زن الزامی پیش از بارداری.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>فقدان یک/دوطرفه وازدفران<i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>تصویربرداری کلیه ضروری (آژنزی کلیوی همراه <strong>۱۰–۲۵٪</strong>).</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>برگشت وازکتومی: باز بودن ~<strong>۱۰۰٪</strong>، بارداری ~<strong>۸۰٪</strong> &middot; آزواسپرمی ۶ ماه پس از برگشت = شکست عمل <i class="fas fa-arrow-left action-arrow bg-cyan-100 text-cyan-600 text-[10px] mx-1"></i>برداشت اسپرم بیضه + ICSI.</span></li>
-    </ul>
-    <div class="redflag-box searchable-item rounded-xl p-4">
-      <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز بیوپسی بیضه</p>
-      <p class="text-sm text-red-900">آزواسپرمی هیپرگنادوتروپیک (نارسایی بیضه‌ای، LH/FSH بالا + تستوسترون پایین): بیوپسی بیضه توصیه نمی‌شود — اسپرم اهدایی مدنظر.</p>
-    </div>
-    </div>
-
-    <div class="searchable-item">
-    <p class="sub-h"><i class="fa-solid fa-user-clock"></i> سن پیشرفته پدری (APA)</p>
-    <ul class="space-y-2 text-slate-700 text-[15px]">
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>تعریف: &ge;<strong>۴۰ سال</strong> در زمان لقاح &middot; افت محسوس بارداری در ۴۰–۴۵ سال، به‌ویژه بالای ۵۰.</span></li>
-      <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2 shrink-0"></i><span>APA<i class="fas fa-arrow-left action-arrow bg-red-100 text-red-600 text-[10px] mx-1"></i>اختلالات اثر سن پدری (آکندروپلازی)، خطر بالاتر شکاف لب و فتق دیافراگماتیک.</span></li>
-    </ul>
-    </div>
-
-    <!-- QUIZ SECTION 2 -->
-    <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
-      <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
-
-      <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
-        <p class="font-bold text-slate-800 mb-2">سوال ۱ &middot; فرآیند توانمندسازی اسپرم و میکرواینجکشن</p>
-        <p class="text-slate-700 text-sm mb-3">یکی از مراحل capacitation اسپرم در اپیدیدیم انجام می‌شود. اگر اسپرم از وازدفران یا بیضه گرفته شود، برای لقاح آن از چه روشی باید استفاده کرد؟</p>
-        <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q1-answer">
-          <button type="button" class="quiz-option" data-correct="false">الف) IVF</button>
-          <button type="button" class="quiz-option" data-correct="true">ب) میکرواینجکشن</button>
-          <button type="button" class="quiz-option" data-correct="false">ج) IUI</button>
-          <button type="button" class="quiz-option" data-correct="false">د) تزریق ساب زونال</button>
+      <!-- Drugs and Toxins -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-pills"></i> داروها، سموم و لوبریکانت‌ها (جدول ۳۶-۲)</p>
+        <div class="overflow-x-auto rounded-xl border border-slate-200 mb-3">
+          <table class="gv-table w-full text-sm whitespace-nowrap">
+            <thead class="bg-cyan-50 text-cyan-800 font-black">
+              <tr>
+                <th class="w-1/3">مکانیسم اثر</th>
+                <th class="w-2/3">داروهای مرتبط</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="font-bold">اختلال اسپرماتوژنز</td><td>سولفاسالازین، متوترکسات، نیتروفورانتوئین، کلشی‌سین، شیمی‌درمانی</td></tr>
+              <tr><td class="font-bold">سرکوب هیپوفیز</td><td>تزریقات تستوسترون، آنالوگ‌های GnRH</td></tr>
+              <tr><td class="font-bold">اثرات آنتی‌آندروژنیک</td><td>سایمتیدین، اسپیرونولاکتون</td></tr>
+              <tr><td class="font-bold">شکست در انزال</td><td>آلفا-بلاکرها، ضدافسردگی‌ها، فنوتیازین‌ها</td></tr>
+              <tr><td class="font-bold">اختلال نعوظ (ED)</td><td>بتا-بلاکرها، دیورتیک‌های تیازیدی، متوکلوپرامید</td></tr>
+              <tr><td class="font-bold">داروهای سوءمصرفی</td><td>استروئیدهای آنابولیک، کانابیس، هروئین، کوکائین</td></tr>
+            </tbody>
+          </table>
         </div>
-        <div id="q1-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
-          <p class="font-black mb-1">پاسخ صحیح: گزینه ب (میکرواینجکشن / ICSI)</p>
-          <p>اسپرم‌هایی که مستقیماً از بیضه (TESE/TESA) یا وازدفران استخراج می‌شوند، مراحل نهایی بلوغ و کاپاسیتاسیون را در اپیدیدیم طی نکرده‌اند و فاقد توانایی نفوذ به زونا پلوسیدا در IVF متعارف هستند؛ تنها روش مؤثر بارورسازی، تزریق درون سیتوپلاسمی اسپرم (ICSI) است.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <div class="bg-red-50 border border-red-200 rounded-xl p-4">
+            <p class="font-bold text-red-800 mb-1 flex items-center gap-1"><i class="fa-solid fa-ban"></i> لوبریکانت‌های مضر (مهار تحرک اسپرم)</p>
+            <p class="text-sm text-red-700">Astroglide، KY Jelly، بزاق (Saliva)، روغن زیتون.</p>
+          </div>
+          <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-4">
+            <p class="font-bold text-emerald-800 mb-1 flex items-center gap-1"><i class="fa-solid fa-check-circle"></i> لوبریکانت‌های ایمن (عدم مهار اسپرم)</p>
+            <p class="text-sm text-emerald-700">Pre-Seed (هیدروکسی‌اتیل سلولز)، روغن معدنی (Mineral oil)، روغن کانولا.</p>
+          </div>
+        </div>
+
+        <div class="redflag-box rounded-xl p-4 mt-4">
+          <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز تستوسترون‌درمانی</p>
+          <p class="text-sm text-red-900">استفاده از <strong>تستوسترون اگزوژن</strong> در مردان مبتلا به ساب‌فرتیلیتی ممنوع است. این کار باعث بازخورد منفی هیپوفیزی (سرکوب LH/FSH)، افت شدید تستوسترون داخل‌بیضه‌ای و توقف اسپرماتوژنز می‌شود.</p>
         </div>
       </div>
 
+      <!-- Semen Analysis -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-microscope"></i> آنالیز مایع منی (Semen Analysis) و معیارهای WHO 2021</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed mb-4">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span>هیچ پارامتر منفردی به تنهایی تشخیصی نیست. حداقل <strong>۲ نمونه</strong> (به دلیل تنوع بین انزال‌ها) باید بررسی شود.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">شرایط جمع‌آوری:</strong> زمان پرهیز (Abstinence) توصیه‌شده <strong>$2 \text{ تا } 7 \text{ days}$</strong> است. پرهیز طولانی‌تر (بیش از ۵-۱۰ روز) اگرچه ممکن است تعداد را بالا ببرد، اما حجم، تحرک، مورفولوژی و زنده مانی را کاهش داده و فرگمانتاسیون DNA را بالا می‌برد.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">نکته برای IUI:</strong> کوتاه کردن زمان پرهیز به $\le 2 \text{ days}$ نرخ بارداری را بهبود می‌بخشد.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">فرآیند انتقال:</strong> نمونه ترجیحاً باید ظرف $30 \text{ minutes}$ (حداکثر ۵۰ دقیقه) به آزمایشگاه برسد و ظرف ۱ ساعت بررسی شود. دما باید بین $20^\circ \text{C} \text{ تا } 37^\circ \text{C}$ باشد.</span></li>
+        </ul>
+
+        <div class="overflow-x-auto rounded-xl border border-slate-200 mb-3">
+          <table class="gv-table w-full text-sm whitespace-nowrap">
+            <thead class="bg-indigo-50 text-indigo-700 font-black">
+              <tr>
+                <th class="w-1/3 text-right">پارامتر</th>
+                <th class="w-1/3 text-center">WHO 2010</th>
+                <th class="w-1/3 text-center">WHO 2021 (جدید)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="font-bold">حجم (Volume)</td><td class="text-center">$\ge 1.5 \text{ mL}$</td><td class="text-center text-indigo-700 font-black">$\ge 1.4 \text{ mL}$</td></tr>
+              <tr><td class="font-bold">غلظت اسپرم (Concentration)</td><td class="text-center">$\ge 15 \text{ million/mL}$</td><td class="text-center text-indigo-700 font-black">$\ge 16 \text{ million/mL}$</td></tr>
+              <tr><td class="font-bold">تحرک پیش‌رونده (Progressive)</td><td class="text-center">$\ge 32\%$</td><td class="text-center text-indigo-700 font-black">$\ge 30\%$</td></tr>
+              <tr><td class="font-bold">مورفولوژی نرمال (Strict criteria)</td><td class="text-center">$\ge 4\%$</td><td class="text-center text-indigo-700 font-black">$\ge 4\%$</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed mt-4">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">تفسیر حجم و pH:</strong> حجم طبیعی $\ge 1.4 \text{ mL}$ و pH طبیعی $\ge 7.2$ است. حجم پایین همراه با pH اسیدی ($<7$) قویاً مطرح‌کننده <strong>فقدان مادرزادی وازدفران (CBAVD)</strong> است. حجم پایین به تنهایی می‌تواند ناشی از انزال رتروگراد، کمبود آندروژن یا اشکال در جمع‌آوری باشد.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">اصطلاحات:</strong> نورموزواسپرمی (همه نرمال) &middot; الیگوزواسپرمی (کاهش تعداد) &middot; آستنوزواسپرمی (کاهش تحرک) &middot; تراتوزواسپرمی (مورفولوژی غیرطبیعی) &middot; آزواسپرمی (فقدان اسپرم در مایع) &middot; آسپرمی (فقدان کامل مایع منی).</span></li>
+        </ul>
+
+        <div class="redflag-box rounded-xl p-4 mt-4">
+          <p class="flex items-center gap-2 font-black text-red-700 mb-2"><i class="fa-solid fa-circle-xmark text-red-500"></i> خط قرمز جمع‌آوری نمونه</p>
+          <p class="text-sm text-red-900">استفاده از <strong>کاندوم لاتکس معمولی</strong> برای جمع‌آوری نمونه ممنوع است زیرا لاتکس برای اسپرم‌ها توکسیک (سمی) است. تنها کاندوم‌های مخصوص و تأییدشده برای آنالیز اسپرم مجازند. جمع‌آوری از طریق مقاربت به دلیل خطر آلودگی (Contamination) توصیه نمی‌شود.</p>
+        </div>
+      </div>
+
+      <!-- Treatments and Conditions -->
+      <div class="searchable-item mb-6">
+        <p class="sub-h"><i class="fa-solid fa-user-doctor"></i> شرایط خاص بالینی و درمان‌ها</p>
+        <ul class="space-y-2 text-slate-700 text-[15px] leading-relaxed">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">واریکوسل (Varicocele):</strong> جراحی ترمیم واریکوسل ممکن است کمک‌کننده باشد، اما پس از ترمیم، شروع ART باید $\ge 6 \text{ months}$ به تعویق بیفتد. <strong class="text-red-600">خط قرمز:</strong> جراحی واریکوسل در بیماران مبتلا به آزواسپرمی غیرانسدادی (نارسایی بیضه) مطلقاً ممنوع است.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">IUI و اسپرم اهدایی:</strong> برای بهترین نتایج IUI، شمارش کل اسپرم‌های متحرک (TMSC) شسته‌شده باید $\ge 9 \text{ million}$ باشد. <strong class="text-red-600">خط قرمز اسپرم اهدایی:</strong> به دلیل خطر HIV، استفاده از اسپرم اهدایی تازه ممنوع است (گایدلاین CDC/ASRM). فقط نمونه‌های منجمد که $\ge 6 \text{ months}$ قرنطینه شده‌اند و اهداکننده مجدداً تست منفی داشته باشد مجازند.</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">میکرواینجکشن (ICSI):</strong> دور زدن نیاز به تحرک، کاپاسیتاسیون و اتصال به زونا. اندیکاسیون‌های اصلی: فاکتور مردانه شدید، استفاده از تخمک فریز شده، و <strong>اسپرم استخراج‌شده با جراحی (TESE/PESA)</strong>. (اسپرم‌های بیضه/اپیدیدیم کاپاسیتاسیون طبیعی در موکوس را طی نکرده‌اند و بدون ICSI قادر به لقاح نیستند).</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">آزواسپرمی (Azoospermia):</strong> شامل سه دسته پیش‌بیضه‌ای (هیپوگنادوتروپیک)، بیضه‌ای (نارسایی اولیه) و پس‌بیضه‌ای (انسدادی). 
+            <ul class="mt-1 mr-4 space-y-1 list-disc list-inside text-sm text-slate-600">
+              <li>در نوع <strong>غیرانسدادی</strong>: بررسی کاریوتایپ (شایع‌ترین: کلاین‌فلتر) و میکرودیلیشن کروموزوم Y الزامی است.</li>
+              <li>در نوع <strong>انسدادی (CBAVD)</strong>: تقریباً دو سوم مردان جهش ژن CFTR (سیستیک فیبروزیس) دارند. قبل از استفاده از اسپرم آن‌ها، آزمایش ناقل بودن شریک زن الزامی است. تصویربرداری کلیه نیز ضروری است (همراهی با آژنزی کلیوی).</li>
+            </ul>
+          </span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-[6px] text-cyan-500 mt-2.5 shrink-0"></i><span><strong class="font-bold text-slate-900">سن پیشرفته پدری (Advanced Paternal Age - APA):</strong> تعریف آن سن $\ge 40 \text{ years}$ در زمان لقاح است. افت باروری به‌ویژه پس از ۵۰ سالگی محسوس است. APA خطر اختلالات غالب اتوزومال (مانند آکندروپلازی)، شکاف لب و فتق دیافراگماتیک را در جنین افزایش می‌دهد.</span></li>
+        </ul>
+      </div>
+
+      <!-- QUIZ SECTION -->
+      <div class="quiz-section mt-8 pt-6 border-t-2 border-dashed border-indigo-200">
+        <h4 class="font-black text-indigo-700 mb-4 flex items-center gap-2 text-base"><i class="fa-solid fa-circle-question"></i> سوالات مرتبط این فصل</h4>
+
+        <!-- Quiz 1 -->
+        <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+          <p class="font-bold text-slate-800 mb-2">سوال ۱ &middot; فرآیند توانمندسازی اسپرم و میکرواینجکشن</p>
+          <p class="text-slate-700 text-sm mb-3">یکی از مراحل capacitation اسپرم در اپیدیدیم انجام می‌شود. اگر اسپرم از وازدفران یا بیضه گرفته شود (TESE)، برای لقاح آن از چه روشی باید استفاده کرد؟</p>
+          <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q1-answer">
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">الف) IVF کلاسیک</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, true)">ب) میکرواینجکشن (ICSI)</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">ج) IUI (تلقیح داخل رحمی)</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">د) تزریق ساب زونال (SUZI)</button>
+          </div>
+          <div id="q1-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+            <p class="font-black mb-1">پاسخ صحیح: گزینه ب</p>
+            <p>اسپرم‌هایی که مستقیماً از بیضه (TESE/TESA) استخراج می‌شوند، مراحل نهایی بلوغ را در اپیدیدیم طی نکرده‌اند و فاقد توانایی نفوذ به زونا پلوسیدا در IVF متعارف هستند؛ تنها روش مؤثر بارورسازی برای آن‌ها تزریق مستقیم درون سیتوپلاسم تخمک (ICSI) است.</p>
+          </div>
+        </div>
+
+        <!-- Quiz 2 -->
+        <div class="quiz-item searchable-item bg-slate-50 rounded-xl p-4 mb-3 border border-slate-200">
+          <p class="font-bold text-slate-800 mb-2">سوال ۲ &middot; تفسیر آنالیز مایع منی</p>
+          <p class="text-slate-700 text-sm mb-3">مردی ۳۲ ساله با سابقه ناباروری اولیه مراجعه کرده است. در آنالیز مایع منی، حجم $0.8 \text{ mL}$ و $pH = 6.5$ گزارش شده و هیچ اسپرمی مشاهده نمی‌شود (آزواسپرمی). محتمل‌ترین تشخیص و اقدام بعدی کدام است؟</p>
+          <div class="quiz-options space-y-2 mb-3" data-answered="false" data-target="q2-answer">
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">الف) انزال رتروگراد - بررسی ادرار پس از انزال</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">ب) سندرم کلاین‌فلتر - درخواست کاریوتایپ</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, true)">ج) فقدان مادرزادی وازدفران (CBAVD) - مشاوره ژنتیک برای CFTR همسر</button>
+            <button type="button" class="quiz-option w-full text-right bg-white border border-slate-300 rounded-lg p-3 text-sm hover:bg-slate-100 transition focus:outline-none" onclick="checkAnswer(this, false)">د) کمبود شدید آندروژن - شروع فوری تستوسترون تزریقی</button>
+          </div>
+          <div id="q2-answer" class="quiz-answer hidden mt-3 bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm text-emerald-900">
+            <p class="font-black mb-1">پاسخ صحیح: گزینه ج</p>
+            <p>حجم پایین (کمتر از $1.4 \text{ mL}$) به همراه pH اسیدی (کمتر از ۷) به شدت مطرح‌کننده CBAVD (آزواسپرمی انسدادی) است زیرا ترشحات قلیایی کیسه‌های منی به مجرا نمی‌رسد. در این بیماران شیوع جهش‌های سیستیک فیبروزیس (CFTR) بسیار بالاست و پیش از استفاده از اسپرم استخراج‌شده با جراحی، همسر بیمار حتماً باید از نظر ناقل بودن اسکرین شود.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  function toggleAccordion(button) {
+    const targetId = button.getAttribute('data-target');
+    const content = document.getElementById(targetId);
+    button.classList.toggle('active');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      content.classList.add('block');
+    } else {
+      content.classList.remove('block');
+      content.classList.add('hidden');
+    }
+  }
+
+  function checkAnswer(button, isCorrect) {
+    const parent = button.closest('.quiz-options');
+    if(parent.getAttribute('data-answered') === 'true') return;
+    
+    const targetId = parent.getAttribute('data-target');
+    const answerBox = document.getElementById(targetId);
+    const options = parent.querySelectorAll('.quiz-option');
+    
+    options.forEach(opt => {
+      opt.classList.remove('hover:bg-slate-100', 'border-slate-300');
+      opt.disabled = true;
+      if(opt.onclick.toString().includes('true')) {
+        opt.classList.add('bg-emerald-100', 'border-emerald-500', 'text-emerald-800', 'font-bold');
+      } else {
+        opt.classList.add('opacity-50', 'bg-slate-50');
+      }
+    });
+
+    if(!isCorrect) {
+      button.classList.remove('opacity-50', 'bg-slate-50');
+      button.classList.add('bg-red-100', 'border-red-500', 'text-red-800');
+    }
+
+    parent.setAttribute('data-answered', 'true');
+    answerBox.classList.remove('hidden');
+  }
+</script>
+
+</body>
+</html>
